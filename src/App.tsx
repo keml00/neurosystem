@@ -9,6 +9,7 @@ import ConsultationModal from './components/ConsultationModal';
 import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { Menu, X, Phone } from 'lucide-react';
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   const { scrollYProgress } = useScroll();
@@ -157,11 +158,16 @@ function App() {
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-neon-cyan/5 rounded-full blur-[150px] -z-10" />
       </footer>
 
+      <ConsultationModal
+        isOpen={isConsultationOpen}
+        onClose={() => setIsConsultationOpen(false)}
+      />
       <LegalModal
         isOpen={isLegalOpen}
         onClose={() => setIsLegalOpen(false)}
         type={legalType}
       />
+      <Analytics />
     </div>
   );
 }
