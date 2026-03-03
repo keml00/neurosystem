@@ -53,14 +53,14 @@ export default function Hero({ onOpenConsultation }: HeroProps) {
                         <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6 mb-16">
                             <button
                                 onClick={onOpenConsultation}
-                                className="w-full sm:w-auto btn-neon-cyan flex items-center justify-center gap-3 py-6 px-10 group"
+                                className="w-full sm:w-auto btn-neon-orange flex items-center justify-center gap-3 py-6 px-10 group"
                             >
                                 ОБСУДИТЬ ПРОЕКТ
                                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             </button>
                             <button
                                 onClick={handleCtaClick}
-                                className="w-full sm:w-auto text-white/70 hover:text-white transition-colors flex items-center justify-center gap-3 py-6 px-10"
+                                className="w-full sm:w-auto btn-neon-orange !bg-transparent border-2 border-neon-orange hover:!bg-neon-orange hover:text-black transition-all flex items-center justify-center gap-3 py-6 px-10"
                             >
                                 <MessageSquare className="w-5 h-5" />
                                 БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ
