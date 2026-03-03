@@ -141,7 +141,7 @@ export default function Pricing() {
                             className="flex items-center gap-2 mx-auto px-6 py-3 rounded-full bg-white/5 border border-white/10 text-white/60 hover:text-neon-cyan hover:border-neon-cyan transition-all text-sm uppercase tracking-widest font-bold"
                         >
                             <Download className="w-4 h-4" />
-                            Скачать прайс (TXT)
+                            Скачать прайс
                         </button>
                     </div>
                 </div>
