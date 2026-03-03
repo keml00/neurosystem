@@ -79,26 +79,44 @@ export default function Pricing() {
     const [activeTab, setActiveTab] = useState('web');
 
     const downloadPriceList = () => {
-        let content = "NeuroSystems - ПРАЙС-ЛИСТ 2026 (Март)\n";
-        content += "========================================\n\n";
+        let content = `
+            <html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'>
+            <head><meta charset='utf-8'><title>Прайс-лист NeuroSystems</title>
+            <style>
+                body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+                h1 { color: #00f2ff; text-transform: uppercase; border-bottom: 2px solid #00f2ff; }
+                h2 { color: #ff6b35; margin-top: 30px; border-bottom: 1px solid #eee; }
+                .service { margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px dashed #ccc; }
+                .price { font-weight: bold; color: #333; }
+                .label { color: #666; font-size: 0.9em; }
+            </style>
+            </head>
+            <body>
+                <h1>NeuroSystems - ПРАЙС-ЛИСТ 2026 (Март)</h1>
+        `;
 
         serviceCategories.forEach(cat => {
-            content += `${cat.name.toUpperCase()}\n`;
-            content += "----------------------------------------\n";
+            content += `<h2>${cat.name.toUpperCase()}</h2>`;
             cat.services.forEach(s => {
-                content += `${s.title}: ${s.price}\n`;
-                content += `Что входит: ${s.included}\n`;
-                content += `Срок: ${s.timeline}\n`;
-                content += `Поддержка: ${s.support}\n\n`;
+                content += `
+                    <div class="service">
+                        <strong>${s.title}</strong><br/>
+                        <span class="price">Цена: ${s.price}</span><br/>
+                        <span class="label">Что входит:</span> ${s.included}<br/>
+                        <span class="label">Срок:</span> ${s.timeline}<br/>
+                        <span class="label">Поддержка:</span> ${s.support}
+                    </div>
+                `;
             });
-            content += "\n";
         });
 
-        const blob = new Blob([content], { type: 'text/plain' });
+        content += "</body></html>";
+
+        const blob = new Blob(['\ufeff', content], { type: 'application/msword' });
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
-        a.download = 'NeuroSystems_PriceList_2026.txt';
+        a.download = 'NeuroSystems_PriceList_2026.doc';
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
