@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, ChevronRight, MessageSquare } from 'lucide-react';
+import { ArrowRight, MessageSquare } from 'lucide-react';
 
 interface HeroProps {
     onOpenConsultation: () => void;
