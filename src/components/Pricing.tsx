@@ -1,8 +1,8 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import {
-    Globe, Bot, Terminal, Shield,
-    Smartphone, Search, Layers, Clock,
+    Globe, Terminal,
+    Search, Layers, Clock,
     Zap, LifeBuoy, Code2, Cpu
 } from 'lucide-react';
 
@@ -99,8 +99,8 @@ export default function Pricing() {
                             key={cat.id}
                             onClick={() => setActiveTab(cat.id)}
                             className={`flex items-center gap-3 px-6 py-4 rounded-2xl text-[10px] font-bold uppercase tracking-[0.2em] transition-all duration-300 border ${activeTab === cat.id
-                                    ? 'bg-neon-orange border-neon-orange text-black shadow-neon-orange'
-                                    : 'bg-white/5 border-white/10 text-white/40 hover:text-white hover:border-white/20'
+                                ? 'bg-neon-orange border-neon-orange text-black shadow-neon-orange'
+                                : 'bg-white/5 border-white/10 text-white/40 hover:text-white hover:border-white/20'
                                 }`}
                         >
                             {cat.icon}
