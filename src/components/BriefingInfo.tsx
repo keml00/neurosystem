@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import {
     Users, Settings, Palette, FileText,
-    Cpu, Clock, PlusCircle, Info, CheckSquare
+    Cpu, Clock, PlusCircle, Info
 } from 'lucide-react';
 
 const briefSteps = [

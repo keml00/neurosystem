@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ShieldCheck, Clock, CreditCard, Code, HelpCircle, AlertCircle } from 'lucide-react';
+import { ShieldCheck, CreditCard, Code, HelpCircle, AlertCircle } from 'lucide-react';
 
 const conditions = [
     {

@@ -1,8 +1,5 @@
-import {
-    Globe, Cpu, Search, Terminal, Layers,
-    LifeBuoy, Check, ArrowRight, Download,
-    Code2, Clock, Zap
-} from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Check, Zap, Layout } from 'lucide-react';
 
 export default function StrategyMatrix() {
     return (

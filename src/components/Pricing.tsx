@@ -2,7 +2,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import {
     Globe, Cpu, Search, Terminal, Layers,
-    LifeBuoy, Check, ArrowRight, Download
+    LifeBuoy, Check, ArrowRight, Download,
+    Code2, Clock, Zap
 } from 'lucide-react';
 
 const serviceCategories = [
