@@ -41,7 +41,7 @@ export default function Contact() {
                                     href={`https://t.me/${contactInfo.telegram}`}
                                     target="_blank"
                                     rel="noreferrer"
-                                    className="btn-neon-cyan w-full flex items-center justify-center gap-4 py-6"
+                                    className="btn-neon-orange w-full flex items-center justify-center gap-4 py-6"
                                 >
                                     <MessageSquare className="w-6 h-6" />
                                     НАПИСАТЬ В TELEGRAM

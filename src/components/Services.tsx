@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { MessageSquare, Cpu, Box, CheckCircle2 } from 'lucide-react';
+import { MessageSquare, Cpu, Box, CheckCircle2, Globe } from 'lucide-react';
 
 const services = [
     {
@@ -25,6 +25,14 @@ const services = [
         result: 'Нейросеть, обученная на вашей базе знаний, отвечает точнее эксперта и заменяет отдел из 5 сотрудников.',
         icon: <Cpu className="w-8 h-8" />,
         features: ['Обучение на данных компании', 'Техподдержка 24/7', 'Мультиязычность']
+    },
+    {
+        id: 'websites',
+        title: 'Сайты под ключ',
+        pain: 'Старые сайты с низким SEO и отсутствием конверсии в заявки.',
+        result: 'Современный, быстрый сайт с дизайном в Figma, адаптивом и SEO-оптимизацией, готовый продавать.',
+        icon: <Globe className="w-8 h-8" />,
+        features: ['Дизайн и верстка на коде', 'SEO и Аналитика', 'Подключение к CRM']
     }
 ];
 
