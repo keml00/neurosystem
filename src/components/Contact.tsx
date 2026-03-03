@@ -36,23 +36,25 @@ export default function Contact() {
                         </div>
 
                         <div className="space-y-10 max-w-md mx-auto lg:mx-0">
-                            <a href={`https://t.me/${contactInfo.telegram}`} target="_blank" rel="noreferrer" className="flex items-center gap-6 group">
-                                <div className="w-16 h-16 bg-white/5 rounded-3xl flex items-center justify-center border border-white/10 group-hover:bg-[#00f2ff] group-hover:text-[#0a0b1e] transition-all duration-300">
+                            <div className="flex flex-col gap-6">
+                                <a
+                                    href={`https://t.me/${contactInfo.telegram}`}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="btn-neon-cyan w-full flex items-center justify-center gap-4 py-6"
+                                >
                                     <MessageSquare className="w-6 h-6" />
-                                </div>
-                                <div>
-                                    <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/40 mb-1">Telegram</div>
-                                    <div className="text-2xl font-bold text-white">@{contactInfo.telegram}</div>
-                                </div>
-                            </a>
+                                    НАПИСАТЬ В TELEGRAM
+                                </a>
 
-                            <div className="flex items-center gap-6 group">
-                                <div className="w-16 h-16 bg-white/5 rounded-3xl flex items-center justify-center border border-white/10 text-neon-orange transition-all duration-300">
-                                    <MapPin className="w-6 h-6" />
-                                </div>
-                                <div>
-                                    <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/40 mb-1">Локация</div>
-                                    <div className="text-2xl font-bold text-white">{contactInfo.location}</div>
+                                <div className="flex items-center gap-6 group">
+                                    <div className="w-16 h-16 bg-white/5 rounded-3xl flex items-center justify-center border border-white/10 text-neon-orange transition-all duration-300">
+                                        <MapPin className="w-6 h-6" />
+                                    </div>
+                                    <div>
+                                        <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/40 mb-1">Локация</div>
+                                        <div className="text-2xl font-bold text-white uppercase">{contactInfo.location}</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

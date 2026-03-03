@@ -8,7 +8,7 @@ import LegalModal from './components/LegalModal';
 import ConsultationModal from './components/ConsultationModal';
 import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion';
 import { useState, useEffect } from 'react';
-import { Menu, X, Phone } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Analytics } from '@vercel/analytics/react';
 
 function App() {
@@ -72,7 +72,6 @@ function App() {
             {navLinks.map((link) => (
               <a key={link.name} href={link.href} className="hover:text-white transition-colors">{link.name}</a>
             ))}
-            <a href="tel:+79656000635" className="text-white hover:text-neon-cyan transition-colors tracking-widest">+7 (965) 600-06-35</a>
           </div>
 
           <div className="flex items-center gap-6">
@@ -107,10 +106,6 @@ function App() {
                   </a>
                 ))}
                 <div className="h-[1px] bg-white/5 my-2" />
-                <a href="tel:+79656000635" className="flex items-center gap-3 text-white hover:text-neon-cyan transition-colors py-2">
-                  <Phone className="w-4 h-4 text-neon-cyan" />
-                  <span className="font-bold tracking-widest text-sm">+7 (965) 600-06-35</span>
-                </a>
                 <a
                   href="#contact"
                   className="btn-neon-orange text-center py-4 text-[10px] tracking-[0.3em]"

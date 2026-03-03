@@ -3,7 +3,7 @@ import { Cpu, Network, Database } from 'lucide-react';
 
 const team = [
     {
-        name: "АЛЕКСАНДР",
+        name: "КАМИЛЬ",
         role: "HEAD OF ENGINEERING",
         bio: "Архитектор распределенных систем и AI-решений с 12-летним опытом. Курирует разработку ядра автоматизации.",
         icon: <Cpu className="w-16 h-16" />,
