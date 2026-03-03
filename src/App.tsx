@@ -6,6 +6,10 @@ import Contact from './components/Contact';
 import Pricing from './components/Pricing';
 import LegalModal from './components/LegalModal';
 import ConsultationModal from './components/ConsultationModal';
+import ProjectScaling from './components/ProjectScaling';
+import StrategyMatrix from './components/StrategyMatrix';
+import TrustConditions from './components/TrustConditions';
+import BriefingInfo from './components/BriefingInfo';
 import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
@@ -125,8 +129,12 @@ function App() {
         />
         <Services />
         <Pricing />
-        <Team />
+        <ProjectScaling />
+        <StrategyMatrix />
+        <BriefingInfo />
+        <TrustConditions />
         <Testimonials />
+        <Team />
         <Contact />
       </main>
 

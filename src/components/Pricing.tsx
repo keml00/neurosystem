@@ -1,9 +1,8 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import {
-    Globe, Terminal,
-    Search, Layers, Clock,
-    Zap, LifeBuoy, Code2, Cpu
+    Globe, Cpu, Search, Terminal, Layers,
+    LifeBuoy, Check, ArrowRight, Download
 } from 'lucide-react';
 
 const serviceCategories = [
@@ -78,6 +77,33 @@ const serviceCategories = [
 export default function Pricing() {
     const [activeTab, setActiveTab] = useState('web');
 
+    const downloadPriceList = () => {
+        let content = "NeuroSystems - ПРАЙС-ЛИСТ 2026 (Март)\n";
+        content += "========================================\n\n";
+
+        serviceCategories.forEach(cat => {
+            content += `${cat.name.toUpperCase()}\n`;
+            content += "----------------------------------------\n";
+            cat.services.forEach(s => {
+                content += `${s.title}: ${s.price}\n`;
+                content += `Что входит: ${s.included}\n`;
+                content += `Срок: ${s.timeline}\n`;
+                content += `Поддержка: ${s.support}\n\n`;
+            });
+            content += "\n";
+        });
+
+        const blob = new Blob([content], { type: 'text/plain' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'NeuroSystems_PriceList_2026.txt';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    };
+
     return (
         <section id="pricing" className="section-padding bg-[#0d0d0d] relative overflow-hidden">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-neon-cyan/5 rounded-full blur-[250px] -z-10" />
@@ -88,8 +114,17 @@ export default function Pricing() {
                         ИНВЕСТИРУЙТЕ В <span className="text-neon-cyan italic">РОСТ</span>
                     </h2>
                     <p className="text-xl text-white/40 leading-relaxed uppercase tracking-widest text-sm">
-                        ПРОЗРАЧНОЕ ЦЕНООБРАЗОВАНИЕ БЕЗ СКРЫТЫХ ПЛАТЕЖЕЙ.
+                        Прозрачная стоимость без скрытых платежей. Актуально на 2026 год.
                     </p>
+                    <div className="mt-8">
+                        <button
+                            onClick={downloadPriceList}
+                            className="flex items-center gap-2 mx-auto px-6 py-3 rounded-full bg-white/5 border border-white/10 text-white/60 hover:text-neon-cyan hover:border-neon-cyan transition-all text-sm uppercase tracking-widest font-bold"
+                        >
+                            <Download className="w-4 h-4" />
+                            Скачать прайс (TXT)
+                        </button>
+                    </div>
                 </div>
 
                 {/* Tabs Navigation */}
