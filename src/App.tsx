@@ -1,11 +1,10 @@
-import Hero from './components/Hero';
-import Services from './components/Services';
 import Team from './components/Team';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
+import Pricing from './components/Pricing';
 import LegalModal from './components/LegalModal';
 import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu, X, Phone } from 'lucide-react';
 
 function App() {
@@ -19,6 +18,18 @@ function App() {
   const [legalType, setLegalType] = useState<'privacy' | 'legal'>('privacy');
   const [isLegalOpen, setIsLegalOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [visitorCount, setVisitorCount] = useState(1248);
+
+  useEffect(() => {
+    const savedCount = localStorage.getItem('visitorCount');
+    if (savedCount) {
+      const newCount = parseInt(savedCount) + 1;
+      setVisitorCount(newCount);
+      localStorage.setItem('visitorCount', newCount.toString());
+    } else {
+      localStorage.setItem('visitorCount', '1248');
+    }
+  }, []);
 
   const openLegal = (type: 'privacy' | 'legal') => {
     setLegalType(type);
@@ -27,6 +38,7 @@ function App() {
 
   const navLinks = [
     { name: 'Услуги', href: '#services' },
+    { name: 'Цены', href: '#pricing' },
     { name: 'Команда', href: '#team' },
     { name: 'Отзывы', href: '#testimonials' },
     { name: 'Контакты', href: '#contact' },
@@ -110,6 +122,7 @@ function App() {
       <main>
         <Hero />
         <Services />
+        <Pricing />
         <Team />
         <Testimonials />
         <Contact />
@@ -130,7 +143,9 @@ function App() {
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/[0.02] border border-white/[0.05] rounded-full opacity-30 hover:opacity-100 transition-opacity duration-700">
             <div className="w-1 h-1 bg-neon-cyan rounded-full animate-pulse" />
             <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-white/40">УНИКАЛЬНЫХ ПОСЕТИТЕЛЕЙ: </span>
-            <span className="text-[9px] font-bold text-neon-cyan tabular-nums">1,248</span>
+            <span className="text-[9px] font-bold text-neon-cyan tabular-nums">
+              {visitorCount.toLocaleString('ru-RU')}
+            </span>
           </div>
         </div>
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-neon-cyan/5 rounded-full blur-[150px] -z-10" />

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Send, Phone, Mail, MessageSquare } from 'lucide-react';
+import { Send, Phone, Mail, MessageSquare, MapPin } from 'lucide-react';
 import { useState } from 'react';
 
 export default function Contact() {
@@ -12,7 +12,8 @@ export default function Contact() {
     const contactInfo = {
         phone: "+79656000635",
         email: "keml00@icloud.com",
-        telegram: "keml00"
+        telegram: "keml00",
+        location: "Казань, Россия"
     };
 
     const handleSubmit = (e: React.FormEvent) => {
@@ -66,6 +67,16 @@ export default function Contact() {
                                     <div className="text-2xl font-bold text-white">@{contactInfo.telegram}</div>
                                 </div>
                             </a>
+
+                            <div className="flex items-center gap-6 group">
+                                <div className="w-16 h-16 bg-white/5 rounded-3xl flex items-center justify-center border border-white/10 text-neon-orange transition-all duration-300">
+                                    <MapPin className="w-6 h-6" />
+                                </div>
+                                <div>
+                                    <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/40 mb-1">Локация</div>
+                                    <div className="text-2xl font-bold text-white">{contactInfo.location}</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
