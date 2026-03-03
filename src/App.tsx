@@ -5,6 +5,7 @@ import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Pricing from './components/Pricing';
 import LegalModal from './components/LegalModal';
+import ConsultationModal from './components/ConsultationModal';
 import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { Menu, X, Phone } from 'lucide-react';
@@ -19,6 +20,7 @@ function App() {
 
   const [legalType, setLegalType] = useState<'privacy' | 'legal'>('privacy');
   const [isLegalOpen, setIsLegalOpen] = useState(false);
+  const [isConsultationOpen, setIsConsultationOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [visitorCount, setVisitorCount] = useState(1248);
 
@@ -122,7 +124,9 @@ function App() {
       </nav>
 
       <main>
-        <Hero />
+        <Hero
+          onOpenConsultation={() => setIsConsultationOpen(true)}
+        />
         <Services />
         <Pricing />
         <Team />

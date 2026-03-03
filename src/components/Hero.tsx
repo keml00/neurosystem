@@ -1,7 +1,11 @@
 import { motion } from 'framer-motion';
-import { ChevronRight } from 'lucide-react';
+import { ArrowRight, ChevronRight, MessageSquare } from 'lucide-react';
 
-export default function Hero() {
+interface HeroProps {
+    onOpenConsultation: () => void;
+}
+
+export default function Hero({ onOpenConsultation }: HeroProps) {
     const telegramUrl = "https://t.me/keml00";
     const template = encodeURIComponent(
         "Здравствуйте! Я хочу получить проект ТЗ бесплатно.\n\n" +
@@ -46,13 +50,22 @@ export default function Hero() {
                             <span className="text-white"> Бесплатно составим ТЗ и рассчитаем ROI вашего проекта за 24 часа.</span>
                         </p>
 
-                        <button
-                            onClick={handleCtaClick}
-                            className="btn-neon-orange flex items-center justify-center gap-2 group text-lg"
-                        >
-                            ПОЛУЧИТЬ ПРОЕКТ ТЗ БЕСПЛАТНО
-                            <ChevronRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
-                        </button>
+                        <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6 mb-16">
+                            <button
+                                onClick={onOpenConsultation}
+                                className="w-full sm:w-auto btn-neon-cyan flex items-center justify-center gap-3 py-6 px-10 group"
+                            >
+                                ОБСУДИТЬ ПРОЕКТ
+                                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                            </button>
+                            <button
+                                onClick={handleCtaClick}
+                                className="w-full sm:w-auto text-white/70 hover:text-white transition-colors flex items-center justify-center gap-3 py-6 px-10"
+                            >
+                                <MessageSquare className="w-5 h-5" />
+                                БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ
+                            </button>
+                        </div>
 
                         <div className="mt-12 flex flex-wrap gap-8 text-sm font-bold text-white/40">
                             <div className="flex items-center gap-2">
