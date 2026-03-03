@@ -37,15 +37,6 @@ export default function Contact() {
 
                         <div className="space-y-10 max-w-md mx-auto lg:mx-0">
                             <div className="flex flex-col gap-6">
-                                <a
-                                    href={`https://t.me/${contactInfo.telegram}`}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    className="btn-neon-orange w-full flex items-center justify-center gap-4 py-6"
-                                >
-                                    <MessageSquare className="w-6 h-6" />
-                                    НАПИСАТЬ В TELEGRAM
-                                </a>
 
                                 <div className="flex items-center gap-6 group">
                                     <div className="w-16 h-16 bg-white/5 rounded-3xl flex items-center justify-center border border-white/10 text-neon-orange transition-all duration-300">
