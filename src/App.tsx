@@ -10,6 +10,7 @@ import ProjectScaling from './components/ProjectScaling';
 import StrategyMatrix from './components/StrategyMatrix';
 import TrustConditions from './components/TrustConditions';
 import BriefingInfo from './components/BriefingInfo';
+import ScrollToTop from './components/ScrollToTop';
 import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
@@ -171,6 +172,7 @@ function App() {
         type={legalType}
       />
       <Analytics />
+      <ScrollToTop />
     </div>
   );
 }
