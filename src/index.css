@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --accent-orange: #ff6b35;
+  --accent-cyan: #00f2ff;
+  --bg-dark: #121212;
+  --bg-card: rgba(255, 255, 255, 0.05);
+  --text-light: #ffffff;
+  --text-muted: #a0a0c0;
+}
+
+@layer base {
+  body {
+    @apply bg-ral-grey text-white font-sans antialiased overflow-x-hidden;
+    background-image:
+      radial-gradient(circle at 20% 20%, rgba(0, 242, 255, 0.05) 0%, transparent 40%),
+      radial-gradient(circle at 80% 80%, rgba(255, 107, 53, 0.05) 0%, transparent 40%);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  .serif {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .btn-neon-orange {
+    @apply relative overflow-hidden bg-gradient-to-r from-neon-orange to-[#f7b733] text-white px-8 py-4 rounded-xl font-bold transition-all duration-300 hover:scale-105 active:scale-95 shadow-neon-orange hover:shadow-neon-orange-hover;
+  }
+
+  .glass-dark {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10;
+  }
+
+  .glass-nav {
+    @apply fixed top-0 left-0 right-0 z-50 bg-ral-grey/80 backdrop-blur-md border-b border-white/5;
+  }
+
+  .section-padding {
+    @apply py-24 px-6 md:px-12 lg:px-24;
+  }
+
+  .neon-text-cyan {
+    @apply text-neon-cyan drop-shadow-[0_0_8px_#00f2ff80];
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-ral-grey;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-[#4a4d6e] rounded-full hover:bg-[#5a5d7e] transition-colors;
+}
