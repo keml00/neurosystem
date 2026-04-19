@@ -28,16 +28,33 @@ function App() {
   const [isLegalOpen, setIsLegalOpen] = useState(false);
   const [isConsultationOpen, setIsConsultationOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [visitorCount, setVisitorCount] = useState(1248);
+  const [uniqueVisitors, setUniqueVisitors] = useState(1248);
+  const [totalVisitors, setTotalVisitors] = useState(3456);
 
   useEffect(() => {
-    const savedCount = localStorage.getItem('visitorCount');
-    if (savedCount) {
-      const newCount = parseInt(savedCount) + 1;
-      setVisitorCount(newCount);
-      localStorage.setItem('visitorCount', newCount.toString());
+    const savedUniqueCount = localStorage.getItem('uniqueVisitors');
+    const savedTotalCount = localStorage.getItem('totalVisitors');
+    const hasVisited = localStorage.getItem('hasVisited');
+
+    if (!hasVisited) {
+      // First visit - increment both counters
+      const newUnique = savedUniqueCount ? parseInt(savedUniqueCount) + 1 : 1248;
+      const newTotal = savedTotalCount ? parseInt(savedTotalCount) + 1 : 3456;
+
+      setUniqueVisitors(newUnique);
+      setTotalVisitors(newTotal);
+
+      localStorage.setItem('uniqueVisitors', newUnique.toString());
+      localStorage.setItem('totalVisitors', newTotal.toString());
+      localStorage.setItem('hasVisited', 'true');
     } else {
-      localStorage.setItem('visitorCount', '1248');
+      // Return visit - only increment total
+      const newTotal = savedTotalCount ? parseInt(savedTotalCount) + 1 : 3456;
+
+      setUniqueVisitors(savedUniqueCount ? parseInt(savedUniqueCount) : 1248);
+      setTotalVisitors(newTotal);
+
+      localStorage.setItem('totalVisitors', newTotal.toString());
     }
   }, []);
 
@@ -151,12 +168,21 @@ function App() {
             <button onClick={() => openLegal('legal')} className="hover:text-white transition-colors">ПРАВОВАЯ ИНФОРМАЦИЯ</button>
           </div>
 
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/[0.02] border border-white/[0.05] rounded-full opacity-30 hover:opacity-100 transition-opacity duration-700">
-            <div className="w-1 h-1 bg-neon-cyan rounded-full animate-pulse" />
-            <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-white/40">УНИКАЛЬНЫХ ПОСЕТИТЕЛЕЙ: </span>
-            <span className="text-[9px] font-bold text-neon-cyan tabular-nums">
-              {visitorCount.toLocaleString('ru-RU')}
-            </span>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/[0.02] border border-white/[0.05] rounded-full opacity-30 hover:opacity-100 transition-opacity duration-700">
+              <div className="w-1 h-1 bg-neon-cyan rounded-full animate-pulse" />
+              <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-white/40">УНИКАЛЬНЫХ ПОСЕТИТЕЛЕЙ: </span>
+              <span className="text-[9px] font-bold text-neon-cyan tabular-nums">
+                {uniqueVisitors.toLocaleString('ru-RU')}
+              </span>
+            </div>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/[0.02] border border-white/[0.05] rounded-full opacity-30 hover:opacity-100 transition-opacity duration-700">
+              <div className="w-1 h-1 bg-[#ff6b35] rounded-full animate-pulse" />
+              <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-white/40">ПОСЕТИТЕЛЕЙ ВСЕГО: </span>
+              <span className="text-[9px] font-bold text-[#ff6b35] tabular-nums">
+                {totalVisitors.toLocaleString('ru-RU')}
+              </span>
+            </div>
           </div>
         </div>
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-neon-cyan/5 rounded-full blur-[150px] -z-10" />
