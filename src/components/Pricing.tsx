@@ -84,8 +84,8 @@ export default function Pricing() {
             <head><meta charset='utf-8'><title>Прайс-лист NeuroSystems</title>
             <style>
                 body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-                h1 { color: #00f2ff; text-transform: uppercase; border-bottom: 2px solid #00f2ff; }
-                h2 { color: #ff6b35; margin-top: 30px; border-bottom: 1px solid #eee; }
+                h1 { color: #00d9b8; text-transform: uppercase; border-bottom: 2px solid #00d9b8; }
+                h2 { color: #ffb347; margin-top: 30px; border-bottom: 1px solid #eee; }
                 .service { margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px dashed #ccc; }
                 .price { font-weight: bold; color: #333; }
                 .label { color: #666; font-size: 0.9em; }
@@ -125,12 +125,12 @@ export default function Pricing() {
 
     return (
         <section id="pricing" className="section-padding bg-[#0d0d0d] relative overflow-hidden">
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-neon-cyan/5 rounded-full blur-[250px] -z-10" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-transformative-teal/5 rounded-full blur-[250px] -z-10" />
 
             <div className="container mx-auto px-6">
                 <div className="text-center max-w-3xl mx-auto mb-20">
                     <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 tracking-tight uppercase">
-                        ИНВЕСТИРУЙТЕ В <span className="text-neon-cyan italic">РОСТ</span>
+                        ИНВЕСТИРУЙТЕ В <span className="text-transformative-teal italic">РОСТ</span>
                     </h2>
                     <p className="text-xl text-white/40 leading-relaxed uppercase tracking-widest text-sm">
                         Прозрачная стоимость без скрытых платежей. Актуально на 2026 год.
@@ -138,7 +138,7 @@ export default function Pricing() {
                     <div className="mt-8">
                         <button
                             onClick={downloadPriceList}
-                            className="flex items-center gap-2 mx-auto px-6 py-3 rounded-full bg-white/5 border border-white/10 text-white/60 hover:text-neon-cyan hover:border-neon-cyan transition-all text-sm uppercase tracking-widest font-bold"
+                            className="flex items-center gap-2 mx-auto px-6 py-3 rounded-full bg-white/5 border border-white/10 text-white/60 hover:text-transformative-teal hover:border-transformative-teal transition-all text-sm uppercase tracking-widest font-bold"
                         >
                             <Download className="w-4 h-4" />
                             Скачать прайс
@@ -153,7 +153,7 @@ export default function Pricing() {
                             key={cat.id}
                             onClick={() => setActiveTab(cat.id)}
                             className={`flex items-center gap-3 px-6 py-4 rounded-2xl text-[10px] font-bold uppercase tracking-[0.2em] transition-all duration-300 border ${activeTab === cat.id
-                                ? 'bg-neon-orange border-neon-orange text-black shadow-neon-orange'
+                                ? 'bg-amber-haze border-amber-haze text-black shadow-amber-glow'
                                 : 'bg-white/5 border-white/10 text-white/40 hover:text-white hover:border-white/20'
                                 }`}
                         >
@@ -181,11 +181,11 @@ export default function Pricing() {
                                         initial={{ opacity: 0, y: 10 }}
                                         animate={{ opacity: 1, y: 0 }}
                                         transition={{ delay: idx * 0.05 }}
-                                        className="group p-6 md:p-8 rounded-3xl bg-white/5 border border-white/5 hover:border-neon-cyan/30 hover:bg-white/[0.08] transition-all duration-500 flex flex-col lg:flex-row lg:items-center gap-8"
+                                        className="group p-6 md:p-8 rounded-3xl bg-white/5 border border-white/5 hover:border-transformative-teal/30 hover:bg-white/[0.08] transition-all duration-500 flex flex-col lg:flex-row lg:items-center gap-8"
                                     >
                                         <div className="flex-grow">
                                             <div className="flex items-center gap-4 mb-4">
-                                                <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 text-neon-cyan transition-colors group-hover:bg-neon-cyan group-hover:text-[#0a0b1e]">
+                                                <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 text-transformative-teal transition-colors group-hover:bg-transformative-teal group-hover:text-[#0a0b1e]">
                                                     <Code2 className="w-5 h-5" />
                                                 </div>
                                                 <h3 className="text-xl md:text-2xl font-bold text-white tracking-tight">{service.title}</h3>
@@ -194,11 +194,11 @@ export default function Pricing() {
 
                                             <div className="flex flex-wrap gap-4 md:gap-8">
                                                 <div className="flex items-center gap-2">
-                                                    <Clock className="w-4 h-4 text-neon-orange" />
+                                                    <Clock className="w-4 h-4 text-amber-haze" />
                                                     <span className="text-[10px] font-bold uppercase tracking-widest text-white/60">{service.timeline}</span>
                                                 </div>
                                                 <div className="flex items-center gap-2">
-                                                    <Zap className="w-4 h-4 text-neon-cyan" />
+                                                    <Zap className="w-4 h-4 text-transformative-teal" />
                                                     <span className="text-[10px] font-bold uppercase tracking-widest text-white/60">{service.support}</span>
                                                 </div>
                                             </div>
@@ -211,7 +211,7 @@ export default function Pricing() {
                                             </div>
                                             <a
                                                 href="#contact"
-                                                className="w-full lg:w-auto btn-neon-orange py-4 px-10 !text-[10px] !tracking-[0.2em]"
+                                                className="w-full lg:w-auto btn-amber-glow py-4 px-10 !text-[10px] !tracking-[0.2em]"
                                             >
                                                 ОБСУДИТЬ ПРОЕКТ
                                             </a>
@@ -224,10 +224,10 @@ export default function Pricing() {
                 </div>
 
                 {/* Bottom CTA */}
-                <div className="mt-20 p-8 md:p-12 rounded-[3rem] bg-gradient-to-r from-neon-cyan/10 to-transparent border border-white/5 flex flex-col lg:flex-row items-center justify-between gap-12 relative overflow-hidden group">
-                    <div className="absolute top-0 right-0 w-96 h-96 bg-neon-cyan/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
+                <div className="mt-20 p-8 md:p-12 rounded-[3rem] bg-gradient-to-r from-transformative-teal/10 to-transparent border border-white/5 flex flex-col lg:flex-row items-center justify-between gap-12 relative overflow-hidden group">
+                    <div className="absolute top-0 right-0 w-96 h-96 bg-transformative-teal/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
                     <div className="flex flex-col md:flex-row items-center gap-8 text-center md:text-left relative z-10">
-                        <div className="w-20 h-20 bg-white/5 rounded-[2rem] flex items-center justify-center border border-white/10 text-neon-cyan group-hover:scale-110 transition-transform duration-500">
+                        <div className="w-20 h-20 bg-white/5 rounded-[2rem] flex items-center justify-center border border-white/10 text-transformative-teal group-hover:scale-110 transition-transform duration-500">
                             <Layers className="w-10 h-10" />
                         </div>
                         <div>
@@ -235,7 +235,7 @@ export default function Pricing() {
                             <p className="text-white/40 text-lg">Мы подготовим детализированную смету и ТЗ в течение 24 часов.</p>
                         </div>
                     </div>
-                    <a href="#contact" className="btn-neon-orange px-12 py-6 whitespace-nowrap relative z-10 shadow-neon-orange text-[10px] tracking-[0.3em]">
+                    <a href="#contact" className="btn-amber-glow px-12 py-6 whitespace-nowrap relative z-10 shadow-amber-glow text-[10px] tracking-[0.3em]">
                         ПОЛУЧИТЬ СМЕТУ
                     </a>
                 </div>

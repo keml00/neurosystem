@@ -7,7 +7,7 @@ export default function StrategyMatrix() {
             <div className="container mx-auto px-6">
                 <div className="max-w-4xl mx-auto text-center mb-20">
                     <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 uppercase tracking-tight">
-                        БОТ ИЛИ <span className="text-neon-cyan italic">ВЕБ</span>?
+                        БОТ ИЛИ <span className="text-transformative-teal italic">ВЕБ</span>?
                     </h2>
                     <p className="text-xl text-white/40 leading-relaxed">
                         Помогаем выбрать оптимальную точку старта для вашего продукта.
@@ -23,7 +23,7 @@ export default function StrategyMatrix() {
                         className="p-10 rounded-[3rem] bg-white/[0.02] border border-white/10 hover:border-white/20 transition-colors"
                     >
                         <div className="flex items-center gap-4 mb-8">
-                            <div className="w-12 h-12 rounded-2xl bg-neon-cyan/10 flex items-center justify-center text-neon-cyan border border-neon-cyan/20">
+                            <div className="w-12 h-12 rounded-2xl bg-transformative-teal/10 flex items-center justify-center text-transformative-teal border border-transformative-teal/20">
                                 <Zap className="w-6 h-6" />
                             </div>
                             <h3 className="text-2xl font-bold text-white uppercase tracking-tight">Начинайте с БОТА, если:</h3>
@@ -31,10 +31,10 @@ export default function StrategyMatrix() {
 
                         <ul className="space-y-6">
                             {[
-                                { text: "Нужно быстро проверить идею (MVP за 2-3 недели)", icon: <Check className="w-5 h-5 text-neon-cyan" /> },
-                                { text: "Ограниченный бюджет на старте разработки", icon: <Check className="w-5 h-5 text-neon-cyan" /> },
-                                { text: "Ваша аудитория живет в мессенджерах", icon: <Check className="w-5 h-5 text-neon-cyan" /> },
-                                { text: "Логика продукта: заявки, каталог или FAQ", icon: <Check className="w-5 h-5 text-neon-cyan" /> },
+                                { text: "Нужно быстро проверить идею (MVP за 2-3 недели)", icon: <Check className="w-5 h-5 text-transformative-teal" /> },
+                                { text: "Ограниченный бюджет на старте разработки", icon: <Check className="w-5 h-5 text-transformative-teal" /> },
+                                { text: "Ваша аудитория живет в мессенджерах", icon: <Check className="w-5 h-5 text-transformative-teal" /> },
+                                { text: "Логика продукта: заявки, каталог или FAQ", icon: <Check className="w-5 h-5 text-transformative-teal" /> },
                             ].map((item, i) => (
                                 <li key={i} className="flex items-start gap-4">
                                     <div className="mt-1">{item.icon}</div>
@@ -52,7 +52,7 @@ export default function StrategyMatrix() {
                         className="p-10 rounded-[3rem] bg-white/[0.02] border border-white/10 hover:border-white/20 transition-colors"
                     >
                         <div className="flex items-center gap-4 mb-8">
-                            <div className="w-12 h-12 rounded-2xl bg-neon-orange/10 flex items-center justify-center text-neon-orange border border-neon-orange/20">
+                            <div className="w-12 h-12 rounded-2xl bg-amber-haze/10 flex items-center justify-center text-amber-haze border border-amber-haze/20">
                                 <Layout className="w-6 h-6" />
                             </div>
                             <h3 className="text-2xl font-bold text-white uppercase tracking-tight">Сразу делайте ВЕБ, если:</h3>
@@ -60,10 +60,10 @@ export default function StrategyMatrix() {
 
                         <ul className="space-y-6">
                             {[
-                                { text: "Требуется сложная аналитика и детальные дашборды", icon: <Check className="w-5 h-5 text-neon-orange" /> },
-                                { text: "Работа с огромными массивами табличных данных", icon: <Check className="w-5 h-5 text-neon-orange" /> },
-                                { text: "Необходимо мощное SEO и органический трафик", icon: <Check className="w-5 h-5 text-neon-orange" /> },
-                                { text: "Продукт требует интеграции с множеством сторонних систем", icon: <Check className="w-5 h-5 text-neon-orange" /> },
+                                { text: "Требуется сложная аналитика и детальные дашборды", icon: <Check className="w-5 h-5 text-amber-haze" /> },
+                                { text: "Работа с огромными массивами табличных данных", icon: <Check className="w-5 h-5 text-amber-haze" /> },
+                                { text: "Необходимо мощное SEO и органический трафик", icon: <Check className="w-5 h-5 text-amber-haze" /> },
+                                { text: "Продукт требует интеграции с множеством сторонних систем", icon: <Check className="w-5 h-5 text-amber-haze" /> },
                             ].map((item, i) => (
                                 <li key={i} className="flex items-start gap-4">
                                     <div className="mt-1">{item.icon}</div>
@@ -75,7 +75,7 @@ export default function StrategyMatrix() {
                 </div>
 
                 {/* Modular Advantage */}
-                <div className="mt-20 max-w-4xl mx-auto p-8 rounded-3xl bg-gradient-to-r from-neon-cyan/5 to-neon-orange/5 border border-white/5 text-center">
+                <div className="mt-20 max-w-4xl mx-auto p-8 rounded-3xl bg-gradient-to-r from-transformative-teal/5 to-amber-haze/5 border border-white/5 text-center">
                     <p className="text-white font-medium italic">
                         "Независимо от выбора, мы закладываем архитектуру, которая позволит в будущем бесшовно переходить между форматами."
                     </p>

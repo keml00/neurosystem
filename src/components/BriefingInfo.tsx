@@ -18,12 +18,12 @@ const briefSteps = [
 export default function BriefingInfo() {
     return (
         <section className="section-padding bg-[#0d0d0d] relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-neon-cyan/5 rounded-full blur-[150px] -z-10" />
+            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-transformative-teal/5 rounded-full blur-[150px] -z-10" />
 
             <div className="container mx-auto px-6">
                 <div className="max-w-4xl mx-auto text-center mb-20">
                     <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 uppercase tracking-tight">
-                        ПУТЬ К <span className="text-neon-orange italic">ТОЧНОЙ ЦЕНЕ</span>
+                        ПУТЬ К <span className="text-amber-haze italic">ТОЧНОЙ ЦЕНЕ</span>
                     </h2>
                     <p className="text-xl text-white/40 leading-relaxed">
                         Мы не гадаем на кофейной гуще. Наш структурированный бриф помогает за 8 шагов составить идеальное ТЗ и рассчитать стоимость с точностью до рубля.
@@ -38,10 +38,10 @@ export default function BriefingInfo() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="p-8 rounded-[2.5rem] bg-white/[0.02] border border-white/10 hover:border-neon-cyan/30 transition-all duration-300 group"
+                            className="p-8 rounded-[2.5rem] bg-white/[0.02] border border-white/10 hover:border-transformative-teal/30 transition-all duration-300 group"
                         >
                             <div className="flex items-center justify-between mb-8">
-                                <span className="text-neon-orange font-black text-3xl opacity-40 group-hover:opacity-100 transition-opacity tracking-tighter">
+                                <span className="text-amber-haze font-black text-3xl opacity-40 group-hover:opacity-100 transition-opacity tracking-tighter">
                                     {step.step}
                                 </span>
                                 <div className="p-3 rounded-xl bg-white/5 text-neon-cyan border border-white/10 group-hover:bg-neon-cyan group-hover:text-black transition-all">

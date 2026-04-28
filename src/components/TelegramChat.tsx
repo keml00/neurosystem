@@ -14,7 +14,7 @@ export default function TelegramChat() {
         animate={{ scale: 1 }}
         transition={{ delay: 1, type: 'spring' }}
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-24 right-8 z-40 w-16 h-16 bg-gradient-to-br from-[#00f2ff] to-[#0088cc] rounded-full shadow-lg shadow-[#00f2ff]/50 flex items-center justify-center hover:scale-110 transition-transform group"
+        className="fixed bottom-24 right-8 z-40 w-16 h-16 bg-gradient-to-br from-[#00d9b8] to-[#0088cc] rounded-full shadow-lg shadow-[#00d9b8]/50 flex items-center justify-center hover:scale-110 transition-transform group"
       >
         <AnimatePresence mode="wait">
           {isOpen ? (
@@ -40,7 +40,7 @@ export default function TelegramChat() {
 
         {/* Pulse animation */}
         {!isOpen && (
-          <span className="absolute inset-0 rounded-full bg-[#00f2ff] animate-ping opacity-20" />
+          <span className="absolute inset-0 rounded-full bg-[#00d9b8] animate-ping opacity-20" />
         )}
       </motion.button>
 

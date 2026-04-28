@@ -59,7 +59,7 @@ export default function Services() {
 
             <div className="container mx-auto">
                 <div className="max-w-3xl mb-16 md:mb-24 text-center md:text-left">
-                    <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 md:mb-8 uppercase">НАШИ <span className="text-neon-cyan italic">СЕРВИСЫ</span></h2>
+                    <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 md:mb-8 uppercase">НАШИ <span className="text-transformative-teal italic">СЕРВИСЫ</span></h2>
                     <p className="text-base md:text-xl text-white/40 leading-relaxed max-w-2xl mx-auto md:mx-0">
                         Мы не просто пишем код — мы создаем экосистему, которая работает на ваш результат.
                     </p>
@@ -73,11 +73,11 @@ export default function Services() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.2 }}
-                            className="bg-white/5 backdrop-blur-xl p-8 rounded-[2.5rem] border border-white/10 hover:border-neon-cyan/30 transition-all duration-500 group relative overflow-hidden shadow-neon-cyan hover:shadow-neon-cyan-hover"
+                            className="bg-white/5 backdrop-blur-xl p-8 rounded-[2.5rem] border border-white/10 hover:border-transformative-teal/30 transition-all duration-500 group relative overflow-hidden shadow-teal-glow hover:shadow-teal-glow-hover"
                         >
-                            <div className="absolute top-0 right-0 w-32 h-32 bg-[#00f2ff]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+                            <div className="absolute top-0 right-0 w-32 h-32 bg-transformative-teal/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
 
-                            <div className="w-16 h-16 bg-white/5 flex items-center justify-center rounded-2xl text-[#00f2ff] mb-8 border border-white/10 group-hover:bg-[#00f2ff] group-hover:text-[#0a0b1e] transition-all duration-500 shadow-[0_0_15px_rgba(0,242,255,0.1)] group-hover:shadow-[0_0_25px_rgba(0,242,255,0.3)]">
+                            <div className="w-16 h-16 bg-white/5 flex items-center justify-center rounded-2xl text-transformative-teal mb-8 border border-white/10 group-hover:bg-transformative-teal group-hover:text-[#0a0b1e] transition-all duration-500 shadow-[0_0_15px_rgba(0,217,184,0.1)] group-hover:shadow-[0_0_25px_rgba(0,217,184,0.3)]">
                                 {service.icon}
                             </div>
 
@@ -85,19 +85,19 @@ export default function Services() {
 
                             <div className="space-y-6">
                                 <div className="bg-white/5 p-5 rounded-2xl border border-white/5">
-                                    <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#ff6b35] mb-2 block">Проблема клиента</span>
+                                    <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-amber-haze mb-2 block">Проблема клиента</span>
                                     <p className="text-white/40 text-sm leading-relaxed">{service.pain}</p>
                                 </div>
 
                                 <div className="p-2">
-                                    <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#00f2ff] mb-2 block">Финальный результат</span>
+                                    <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-transformative-teal mb-2 block">Финальный результат</span>
                                     <p className="text-white font-medium leading-relaxed">{service.result}</p>
                                 </div>
 
                                 <ul className="pt-6 border-t border-white/10 space-y-3">
                                     {service.features.map(feature => (
                                         <li key={feature} className="flex items-center gap-3 text-sm text-white/40 group-hover:text-white/60 transition-colors">
-                                            <CheckCircle2 className="w-4 h-4 text-[#00f2ff]" />
+                                            <CheckCircle2 className="w-4 h-4 text-transformative-teal" />
                                             {feature}
                                         </li>
                                     ))}

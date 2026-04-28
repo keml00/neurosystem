@@ -4,7 +4,7 @@ import { ShieldCheck, CreditCard, Code, HelpCircle, AlertCircle } from 'lucide-r
 const conditions = [
     {
         title: "ПОДДЕРЖКА",
-        icon: <HelpCircle className="w-8 h-8 text-neon-cyan" />,
+        icon: <HelpCircle className="w-8 h-8 text-transformative-teal" />,
         items: [
             "Бесплатная поддержка до 90 дней после сдачи",
             "Консультации по работе системы в подарок",
@@ -13,7 +13,7 @@ const conditions = [
     },
     {
         title: "ГАРАНТИЯ КАЧЕСТВА",
-        icon: <ShieldCheck className="w-8 h-8 text-neon-orange" />,
+        icon: <ShieldCheck className="w-8 h-8 text-amber-haze" />,
         items: [
             "Гарантия на отсутствие багов по ТЗ — бессрочно",
             "Критические ошибки исправляем за 24 часа",
@@ -31,7 +31,7 @@ const conditions = [
     },
     {
         title: "ВАША ИНТЕЛЛЕКТУАЛЬНАЯ СОБСТВЕННОСТЬ",
-        icon: <Code className="w-8 h-8 text-neon-cyan" />,
+        icon: <Code className="w-8 h-8 text-transformative-teal" />,
         items: [
             "Полная передача прав на исходный код",
             "Доступы ко всем репозиториям и серверам",
@@ -48,7 +48,7 @@ export default function TrustConditions() {
             <div className="container mx-auto px-6">
                 <div className="max-w-4xl mx-auto text-center mb-20">
                     <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 uppercase tracking-tight">
-                        ЧЕСТНЫЕ <span className="text-neon-cyan italic">УСЛОВИЯ</span>
+                        ЧЕСТНЫЕ <span className="text-transformative-teal italic">УСЛОВИЯ</span>
                     </h2>
                     <p className="text-xl text-white/40 leading-relaxed uppercase tracking-widest text-sm">
                         Работаем так, чтобы вы не беспокоились о результате.

@@ -27,7 +27,7 @@ export default function Testimonials() {
         <section id="testimonials" className="section-padding bg-[#0a0a0a]">
             <div className="container mx-auto">
                 <div className="max-w-3xl mb-16 md:mb-20 text-center md:text-left">
-                    <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 md:mb-8">ЧТО ГОВОРЯТ <span className="text-neon-cyan italic">ПАРТНЕРЫ</span></h2>
+                    <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 md:mb-8">ЧТО ГОВОРЯТ <span className="text-transformative-teal italic">ПАРТНЕРЫ</span></h2>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
@@ -38,9 +38,9 @@ export default function Testimonials() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="bg-white/5 p-10 rounded-[2.5rem] border border-white/5 relative group hover:border-[#00f2ff]/20 transition-all duration-500"
+                            className="bg-white/5 p-10 rounded-[2.5rem] border border-white/5 relative group hover:border-[#00d9b8]/20 transition-all duration-500"
                         >
-                            <Quote className="absolute top-8 right-10 w-16 h-16 text-[#00f2ff]/5 z-0" />
+                            <Quote className="absolute top-8 right-10 w-16 h-16 text-[#00d9b8]/5 z-0" />
                             <div className="relative z-10">
                                 <p className="text-xl text-white/70 italic mb-12 leading-relaxed font-serif">
                                     "{testimonial.content}"
@@ -48,7 +48,7 @@ export default function Testimonials() {
                                 <div className="flex items-center gap-4 border-t border-white/5 pt-6">
                                     <div className="flex-1">
                                         <p className="font-bold text-white text-sm uppercase tracking-wider">{testimonial.name}</p>
-                                        <p className="text-[#00f2ff] text-[10px] font-bold tracking-[0.2em]">{testimonial.role}</p>
+                                        <p className="text-transformative-teal text-[10px] font-bold tracking-[0.2em]">{testimonial.role}</p>
                                     </div>
                                     <div className="text-white/20 text-[10px] font-bold tracking-widest">{testimonial.date}</div>
                                 </div>

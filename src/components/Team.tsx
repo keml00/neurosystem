@@ -7,14 +7,14 @@ const team = [
         role: "HEAD OF ENGINEERING",
         bio: "Архитектор распределенных систем и AI-решений с 12-летним опытом. Курирует разработку ядра автоматизации.",
         icon: <Cpu className="w-16 h-16" />,
-        color: "from-neon-cyan"
+        color: "from-transformative-teal"
     },
     {
         name: "ДМИТРИЙ",
         role: "AI ARCHITECT",
         bio: "Специалист по нейронным сетям и интеграции LLM в бизнес-процессы. Отвечает за интеллектуальную логику систем.",
         icon: <Network className="w-16 h-16" />,
-        color: "from-neon-orange"
+        color: "from-amber-haze"
     },
     {
         name: "МАКСИМ",
@@ -27,10 +27,10 @@ const team = [
 
 export default function Team() {
     return (
-        <section id="team" className="section-padding bg-ral-grey">
+        <section id="team" className="section-padding bg-future-dusk">
             <div className="container mx-auto">
                 <div className="text-center max-w-2xl mx-auto mb-16 md:mb-20">
-                    <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 md:mb-8">КОМАНДА <span className="text-neon-cyan italic">ИНЖЕНЕРОВ</span></h2>
+                    <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 md:mb-8">КОМАНДА <span className="text-transformative-teal italic">ИНЖЕНЕРОВ</span></h2>
                     <p className="text-base md:text-xl text-white/40 leading-relaxed uppercase tracking-widest text-xs md:text-sm">ОПЫТ. ИНТЕЛЛЕКТ. ТЕХНОЛОГИИ.</p>
                 </div>
 
@@ -51,7 +51,7 @@ export default function Team() {
                                 </div>
                             </div>
                             <h3 className="text-2xl font-bold text-white mb-2 tracking-tight uppercase">{member.name}</h3>
-                            <p className="text-neon-cyan font-bold text-xs tracking-widest mb-6 uppercase">{member.role}</p>
+                            <p className="text-transformative-teal font-bold text-xs tracking-widest mb-6 uppercase">{member.role}</p>
                             <p className="text-white/40 text-sm leading-relaxed max-w-xs mx-auto">{member.bio}</p>
                         </motion.div>
                     ))}

@@ -76,7 +76,7 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
                                     <input
                                         type="text"
                                         placeholder="Введите ваше имя"
-                                        className={`w-full bg-white/5 border ${errors.name ? 'border-red-500' : 'border-white/10'} rounded-2xl p-4 text-white focus:ring-2 focus:ring-neon-cyan outline-none transition-all placeholder:text-white/10`}
+                                        className={`w-full bg-white/5 border ${errors.name ? 'border-red-500' : 'border-white/10'} rounded-2xl p-4 text-white focus:ring-2 focus:ring-transformative-teal outline-none transition-all placeholder:text-white/10`}
                                         value={formData.name}
                                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                                     />
@@ -91,7 +91,7 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
                                     <input
                                         type="tel"
                                         placeholder="79991234567"
-                                        className={`w-full bg-white/5 border ${errors.phone ? 'border-red-500' : 'border-white/10'} rounded-2xl p-4 text-white focus:ring-2 focus:ring-neon-cyan outline-none transition-all placeholder:text-white/10`}
+                                        className={`w-full bg-white/5 border ${errors.phone ? 'border-red-500' : 'border-white/10'} rounded-2xl p-4 text-white focus:ring-2 focus:ring-transformative-teal outline-none transition-all placeholder:text-white/10`}
                                         value={formData.phone}
                                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                                     />
@@ -106,7 +106,7 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
                                     <input
                                         type="text"
                                         placeholder="@username"
-                                        className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 text-white focus:ring-2 focus:ring-neon-cyan outline-none transition-all placeholder:text-white/10"
+                                        className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 text-white focus:ring-2 focus:ring-transformative-teal outline-none transition-all placeholder:text-white/10"
                                         value={formData.telegram}
                                         onChange={(e) => setFormData({ ...formData, telegram: e.target.value })}
                                     />
@@ -120,7 +120,7 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
                                     <input
                                         type="text"
                                         placeholder="Опишите тему вашей заявки"
-                                        className={`w-full bg-white/5 border ${errors.topic ? 'border-red-500' : 'border-white/10'} rounded-2xl p-4 text-white focus:ring-2 focus:ring-neon-cyan outline-none transition-all placeholder:text-white/10`}
+                                        className={`w-full bg-white/5 border ${errors.topic ? 'border-red-500' : 'border-white/10'} rounded-2xl p-4 text-white focus:ring-2 focus:ring-transformative-teal outline-none transition-all placeholder:text-white/10`}
                                         value={formData.topic}
                                         onChange={(e) => setFormData({ ...formData, topic: e.target.value })}
                                     />
@@ -149,7 +149,7 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
                                     <input
                                         type="text"
                                         placeholder="Например: до 300 тыс., 500k, не определился"
-                                        className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 text-white focus:ring-2 focus:ring-neon-cyan outline-none transition-all placeholder:text-white/10"
+                                        className="w-full bg-white/5 border border-white/10 rounded-2xl p-4 text-white focus:ring-2 focus:ring-transformative-teal outline-none transition-all placeholder:text-white/10"
                                         value={formData.budget}
                                         onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
                                     />
@@ -157,11 +157,11 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
 
                                 {/* Agreement */}
                                 <div className="flex items-start gap-4 p-4 bg-white/[0.02] border border-white/5 rounded-2xl group cursor-pointer" onClick={() => setFormData({ ...formData, agree: !formData.agree })}>
-                                    <div className={`mt-1 w-5 h-5 flex shrink-0 items-center justify-center rounded border transition-all ${formData.agree ? 'bg-neon-cyan border-neon-cyan' : 'border-white/20'}`}>
+                                    <div className={`mt-1 w-5 h-5 flex shrink-0 items-center justify-center rounded border transition-all ${formData.agree ? 'bg-transformative-teal border-transformative-teal' : 'border-white/20'}`}>
                                         {formData.agree && <Send className="w-3 h-3 text-black" />}
                                     </div>
                                     <div className="text-[10px] leading-relaxed text-white/30">
-                                        Я согласен(а) на <span className="text-neon-cyan underline decoration-white/20 underline-offset-2">обработку персональных данных</span> и принимаю условия <span className="text-neon-cyan underline decoration-white/20 underline-offset-2">политики конфиденциальности</span> <span className="text-red-500">*</span>
+                                        Я согласен(а) на <span className="text-transformative-teal underline decoration-white/20 underline-offset-2">обработку персональных данных</span> и принимаю условия <span className="text-transformative-teal underline decoration-white/20 underline-offset-2">политики конфиденциальности</span> <span className="text-red-500">*</span>
                                     </div>
                                 </div>
                                 {errors.agree && <p className="text-red-500 text-[10px] ml-1">{errors.agree}</p>}
@@ -170,7 +170,7 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
                                 <div className="flex flex-col sm:flex-row items-center gap-4 pt-4 shrink-0">
                                     <button
                                         type="submit"
-                                        className="w-full sm:flex-1 py-5 bg-neon-cyan text-black font-black text-xs uppercase tracking-widest rounded-2xl hover:shadow-[0_0_30px_#00f2ff] transition-all"
+                                        className="w-full sm:flex-1 py-5 bg-transformative-teal text-black font-black text-xs uppercase tracking-widest rounded-2xl hover:shadow-[0_0_30px_#00d9b8] transition-all"
                                     >
                                         Отправить заявку
                                     </button>
