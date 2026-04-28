@@ -14,7 +14,7 @@ export default function TelegramChat() {
         animate={{ scale: 1 }}
         transition={{ delay: 1, type: 'spring' }}
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-8 right-8 z-50 w-16 h-16 bg-gradient-to-br from-[#00f2ff] to-[#0088cc] rounded-full shadow-lg shadow-[#00f2ff]/50 flex items-center justify-center hover:scale-110 transition-transform group"
+        className="fixed bottom-24 right-8 z-40 w-16 h-16 bg-gradient-to-br from-[#00f2ff] to-[#0088cc] rounded-full shadow-lg shadow-[#00f2ff]/50 flex items-center justify-center hover:scale-110 transition-transform group"
       >
         <AnimatePresence mode="wait">
           {isOpen ? (
@@ -51,7 +51,7 @@ export default function TelegramChat() {
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
-            className="fixed bottom-28 right-8 z-50 w-80 bg-ral-grey/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl overflow-hidden"
+            className="fixed bottom-44 right-8 z-40 w-80 bg-ral-grey/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl overflow-hidden"
           >
             {/* Header */}
             <div className="bg-gradient-to-r from-[#00f2ff] to-[#0088cc] p-4">
