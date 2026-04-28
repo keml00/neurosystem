@@ -11,6 +11,7 @@ import StrategyMatrix from './components/StrategyMatrix';
 import TrustConditions from './components/TrustConditions';
 import BriefingInfo from './components/BriefingInfo';
 import ScrollToTop from './components/ScrollToTop';
+import TelegramChat from './components/TelegramChat';
 import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
@@ -47,6 +48,9 @@ function App() {
       localStorage.setItem('uniqueVisitors', newUnique.toString());
       localStorage.setItem('totalVisitors', newTotal.toString());
       localStorage.setItem('hasVisited', 'true');
+
+      // Отправляем уведомление о новом посетителе
+      sendVisitorNotification(true);
     } else {
       // Return visit - only increment total
       const newTotal = savedTotalCount ? parseInt(savedTotalCount) + 1 : 3456;
@@ -55,8 +59,32 @@ function App() {
       setTotalVisitors(newTotal);
 
       localStorage.setItem('totalVisitors', newTotal.toString());
+
+      // Отправляем уведомление о повторном посещении
+      sendVisitorNotification(false);
     }
   }, []);
+
+  const sendVisitorNotification = async (isNewVisitor: boolean) => {
+    try {
+      const visitorInfo = {
+        isNew: isNewVisitor,
+        timestamp: new Date().toISOString(),
+        userAgent: navigator.userAgent,
+        language: navigator.language,
+        referrer: document.referrer || 'Прямой переход',
+        screenResolution: `${window.screen.width}x${window.screen.height}`,
+      };
+
+      await fetch('/api/visitor-notification', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(visitorInfo),
+      });
+    } catch (error) {
+      console.error('Failed to send visitor notification:', error);
+    }
+  };
 
   const openLegal = (type: 'privacy' | 'legal') => {
     setLegalType(type);
@@ -199,6 +227,7 @@ function App() {
       />
       <Analytics />
       <ScrollToTop />
+      <TelegramChat />
     </div>
   );
 }
