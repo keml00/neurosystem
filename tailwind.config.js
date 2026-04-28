@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        'ral-grey': '#121212',
+        'ral-grey': '#474A51',
         'neon-cyan': '#00f2ff',
         'neon-orange': '#ff6b35',
       },

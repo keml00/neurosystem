@@ -7,7 +7,8 @@
 :root {
   --accent-orange: #ff6b35;
   --accent-cyan: #00f2ff;
-  --bg-dark: #121212;
+  --bg-dark: #474A51;
+  --bg-darker: #3a3d42;
   --bg-card: rgba(255, 255, 255, 0.05);
   --text-light: #ffffff;
   --text-muted: #a0a0c0;
