@@ -60,7 +60,7 @@ export default function Hero({ onOpenConsultation }: HeroProps) {
                             </button>
                             <button
                                 onClick={handleCtaClick}
-                                className="w-full sm:w-auto btn-amber-glow !bg-transparent border-2 border-amber-haze hover:!bg-amber-haze hover:text-black transition-all flex items-center justify-center gap-3 py-6 px-10"
+                                className="w-full sm:w-auto btn-glass flex items-center justify-center gap-3 py-6 px-10"
                             >
                                 <MessageSquare className="w-5 h-5" />
                                 БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ
