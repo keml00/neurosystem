@@ -74,7 +74,7 @@ export default function TelegramChat() {
                 Открыть чат в Telegram
               </a>
 
-              <div className="flex items-center gap-2 text-xs text-white/40">
+              <div className="flex items-center gap-2 text-xs text-cloud-dancer/60">
                 <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
                 <span>Обычно отвечаем за 5 минут</span>
               </div>

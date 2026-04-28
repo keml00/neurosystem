@@ -5,23 +5,40 @@
 @tailwind utilities;
 
 :root {
-  /* Future Dusk Theme */
-  --accent-teal: #00d9b8;
-  --accent-amber: #ffb347;
-  --bg-dusk: #1a1a2e;
+  /* Future Dusk Theme 2026 */
+  --accent-teal: #30D5C8;
+  --accent-amber: #FFB347;
+  --bg-dusk: #0C0D1A;
   --bg-purple: #16213e;
   --bg-card: rgba(255, 255, 255, 0.05);
-  --text-light: #f5f5f0;
+  --text-light: #F5F5F7;
   --text-muted: #a0a0c0;
 }
 
 @layer base {
   body {
-    @apply bg-[#1a1a2e] text-white font-sans antialiased overflow-x-hidden;
+    @apply bg-[#0C0D1A] text-cloud-dancer font-sans antialiased overflow-x-hidden;
     background-image:
-      radial-gradient(circle at 20% 20%, rgba(0, 217, 184, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 20% 20%, rgba(48, 213, 200, 0.08) 0%, transparent 50%),
       radial-gradient(circle at 80% 80%, rgba(255, 179, 71, 0.08) 0%, transparent 50%),
       radial-gradient(circle at 50% 50%, rgba(75, 0, 130, 0.15) 0%, transparent 70%);
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  body > * {
+    position: relative;
+    z-index: 2;
   }
 
   h1,
@@ -35,7 +52,9 @@
 
 @layer components {
   .btn-amber-glow {
-    @apply relative overflow-hidden bg-gradient-to-r from-amber-haze to-[#ffc470] text-white px-8 py-4 rounded-xl font-bold transition-all duration-300 hover:scale-105 active:scale-95 shadow-amber-glow hover:shadow-amber-glow-hover;
+    @apply relative overflow-hidden bg-gradient-to-r from-amber-haze/90 to-[#ffc470]/90 text-white px-8 py-4 rounded-xl font-bold transition-all duration-300 hover:scale-105 active:scale-95 shadow-amber-glow hover:shadow-amber-glow-hover;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
   }
 
   .glass-dark {
@@ -51,7 +70,7 @@
   }
 
   .teal-text-glow {
-    @apply text-transformative-teal drop-shadow-[0_0_8px_#00d9b880];
+    @apply text-transformative-teal drop-shadow-[0_0_8px_#30D5C880];
   }
 }
 

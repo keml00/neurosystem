@@ -3,13 +3,13 @@ import { Check, Zap, Layout } from 'lucide-react';
 
 export default function StrategyMatrix() {
     return (
-        <section className="section-padding bg-[#0d0d0d]">
+        <section className="section-padding bg-future-dusk">
             <div className="container mx-auto px-6">
                 <div className="max-w-4xl mx-auto text-center mb-20">
                     <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 uppercase tracking-tight">
                         БОТ ИЛИ <span className="text-transformative-teal italic">ВЕБ</span>?
                     </h2>
-                    <p className="text-xl text-white/40 leading-relaxed">
+                    <p className="text-xl text-cloud-dancer/60 leading-relaxed">
                         Помогаем выбрать оптимальную точку старта для вашего продукта.
                     </p>
                 </div>

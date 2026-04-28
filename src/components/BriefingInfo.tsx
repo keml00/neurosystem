@@ -17,7 +17,7 @@ const briefSteps = [
 
 export default function BriefingInfo() {
     return (
-        <section className="section-padding bg-[#0d0d0d] relative overflow-hidden">
+        <section className="section-padding bg-future-dusk relative overflow-hidden">
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-transformative-teal/5 rounded-full blur-[150px] -z-10" />
 
             <div className="container mx-auto px-6">
@@ -25,7 +25,7 @@ export default function BriefingInfo() {
                     <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 uppercase tracking-tight">
                         ПУТЬ К <span className="text-amber-haze italic">ТОЧНОЙ ЦЕНЕ</span>
                     </h2>
-                    <p className="text-xl text-white/40 leading-relaxed">
+                    <p className="text-xl text-cloud-dancer/60 leading-relaxed">
                         Мы не гадаем на кофейной гуще. Наш структурированный бриф помогает за 8 шагов составить идеальное ТЗ и рассчитать стоимость с точностью до рубля.
                     </p>
                 </div>
@@ -51,7 +51,7 @@ export default function BriefingInfo() {
 
                             <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/20 mb-2">{step.stepTitle || "АНАЛИЗ"}</div>
                             <h3 className="text-xl font-bold text-white mb-4 tracking-tight uppercase group-hover:text-neon-cyan transition-colors">{step.title}</h3>
-                            <p className="text-white/40 text-sm leading-relaxed">{step.desc}</p>
+                            <p className="text-cloud-dancer/60 text-sm leading-relaxed">{step.desc}</p>
                         </motion.div>
                     ))}
                 </div>

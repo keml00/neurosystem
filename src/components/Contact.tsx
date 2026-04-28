@@ -30,7 +30,7 @@ export default function Contact() {
                     <div>
                         <div className="mb-12 text-center lg:text-left">
                             <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 md:mb-8 tracking-tighter uppercase">ГОТОВЫ К <br /> <span className="text-amber-haze italic">РЫВКУ?</span></h2>
-                            <p className="text-base md:text-xl text-white/40 leading-relaxed">
+                            <p className="text-base md:text-xl text-cloud-dancer/60 leading-relaxed">
                                 Оставьте заявку, и мы подготовим <span className="text-white">бесплатное ТЗ</span> вашего проекта в течение 24 часов.
                             </p>
                         </div>
@@ -43,7 +43,7 @@ export default function Contact() {
                                         <MapPin className="w-6 h-6" />
                                     </div>
                                     <div>
-                                        <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/40 mb-1">Локация</div>
+                                        <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-cloud-dancer/60 mb-1">Локация</div>
                                         <div className="text-2xl font-bold text-white uppercase">{contactInfo.location}</div>
                                     </div>
                                 </div>
@@ -60,7 +60,7 @@ export default function Contact() {
                         <form className="space-y-8" onSubmit={handleSubmit}>
                             <div className="space-y-6">
                                 <div>
-                                    <label className="block text-[10px] font-bold uppercase tracking-[0.2em] text-white/40 mb-3 ml-2">Ваше имя</label>
+                                    <label className="block text-[10px] font-bold uppercase tracking-[0.2em] text-cloud-dancer/60 mb-3 ml-2">Ваше имя</label>
                                     <input
                                         type="text"
                                         className="w-full bg-white/5 border border-white/10 rounded-2xl p-5 text-white focus:ring-2 focus:ring-transformative-teal outline-none transition-all"
@@ -70,7 +70,7 @@ export default function Contact() {
                                     />
                                 </div>
                                 <div>
-                                    <label className="block text-[10px] font-bold uppercase tracking-[0.2em] text-white/40 mb-3 ml-2">Ваш телефон</label>
+                                    <label className="block text-[10px] font-bold uppercase tracking-[0.2em] text-cloud-dancer/60 mb-3 ml-2">Ваш телефон</label>
                                     <input
                                         type="tel"
                                         className="w-full bg-white/5 border border-white/10 rounded-2xl p-5 text-white focus:ring-2 focus:ring-transformative-teal outline-none transition-all"

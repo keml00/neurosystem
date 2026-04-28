@@ -60,7 +60,7 @@ export default function Services() {
             <div className="container mx-auto">
                 <div className="max-w-3xl mb-16 md:mb-24 text-center md:text-left">
                     <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 md:mb-8 uppercase">НАШИ <span className="text-transformative-teal italic">СЕРВИСЫ</span></h2>
-                    <p className="text-base md:text-xl text-white/40 leading-relaxed max-w-2xl mx-auto md:mx-0">
+                    <p className="text-base md:text-xl text-cloud-dancer/60 leading-relaxed max-w-2xl mx-auto md:mx-0">
                         Мы не просто пишем код — мы создаем экосистему, которая работает на ваш результат.
                     </p>
                 </div>
@@ -86,7 +86,7 @@ export default function Services() {
                             <div className="space-y-6">
                                 <div className="bg-white/5 p-5 rounded-2xl border border-white/5">
                                     <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-amber-haze mb-2 block">Проблема клиента</span>
-                                    <p className="text-white/40 text-sm leading-relaxed">{service.pain}</p>
+                                    <p className="text-cloud-dancer/60 text-sm leading-relaxed">{service.pain}</p>
                                 </div>
 
                                 <div className="p-2">
@@ -96,7 +96,7 @@ export default function Services() {
 
                                 <ul className="pt-6 border-t border-white/10 space-y-3">
                                     {service.features.map(feature => (
-                                        <li key={feature} className="flex items-center gap-3 text-sm text-white/40 group-hover:text-white/60 transition-colors">
+                                        <li key={feature} className="flex items-center gap-3 text-sm text-cloud-dancer/60 group-hover:text-white/60 transition-colors">
                                             <CheckCircle2 className="w-4 h-4 text-transformative-teal" />
                                             {feature}
                                         </li>

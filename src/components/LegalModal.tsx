@@ -61,7 +61,7 @@ export default function LegalModal({ isOpen, onClose, type }: LegalModalProps) {
                     >
                         <button
                             onClick={onClose}
-                            className="absolute top-8 right-8 text-white/40 hover:text-white transition-colors"
+                            className="absolute top-8 right-8 text-cloud-dancer/60 hover:text-white transition-colors"
                         >
                             <X className="w-8 h-8" />
                         </button>

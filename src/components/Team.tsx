@@ -31,7 +31,7 @@ export default function Team() {
             <div className="container mx-auto">
                 <div className="text-center max-w-2xl mx-auto mb-16 md:mb-20">
                     <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 md:mb-8">КОМАНДА <span className="text-transformative-teal italic">ИНЖЕНЕРОВ</span></h2>
-                    <p className="text-base md:text-xl text-white/40 leading-relaxed uppercase tracking-widest text-xs md:text-sm">ОПЫТ. ИНТЕЛЛЕКТ. ТЕХНОЛОГИИ.</p>
+                    <p className="text-base md:text-xl text-cloud-dancer/60 leading-relaxed uppercase tracking-widest text-xs md:text-sm">ОПЫТ. ИНТЕЛЛЕКТ. ТЕХНОЛОГИИ.</p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
@@ -52,7 +52,7 @@ export default function Team() {
                             </div>
                             <h3 className="text-2xl font-bold text-white mb-2 tracking-tight uppercase">{member.name}</h3>
                             <p className="text-transformative-teal font-bold text-xs tracking-widest mb-6 uppercase">{member.role}</p>
-                            <p className="text-white/40 text-sm leading-relaxed max-w-xs mx-auto">{member.bio}</p>
+                            <p className="text-cloud-dancer/60 text-sm leading-relaxed max-w-xs mx-auto">{member.bio}</p>
                         </motion.div>
                     ))}
                 </div>

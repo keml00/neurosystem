@@ -124,7 +124,7 @@ export default function Pricing() {
     };
 
     return (
-        <section id="pricing" className="section-padding bg-[#0d0d0d] relative overflow-hidden">
+        <section id="pricing" className="section-padding bg-future-dusk relative overflow-hidden">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-transformative-teal/5 rounded-full blur-[250px] -z-10" />
 
             <div className="container mx-auto px-6">
@@ -132,7 +132,7 @@ export default function Pricing() {
                     <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 tracking-tight uppercase">
                         ИНВЕСТИРУЙТЕ В <span className="text-transformative-teal italic">РОСТ</span>
                     </h2>
-                    <p className="text-xl text-white/40 leading-relaxed uppercase tracking-widest text-sm">
+                    <p className="text-xl text-cloud-dancer/60 leading-relaxed uppercase tracking-widest text-sm">
                         Прозрачная стоимость без скрытых платежей. Актуально на 2026 год.
                     </p>
                     <div className="mt-8">
@@ -154,7 +154,7 @@ export default function Pricing() {
                             onClick={() => setActiveTab(cat.id)}
                             className={`flex items-center gap-3 px-6 py-4 rounded-2xl text-[10px] font-bold uppercase tracking-[0.2em] transition-all duration-300 border ${activeTab === cat.id
                                 ? 'bg-amber-haze border-amber-haze text-black shadow-amber-glow'
-                                : 'bg-white/5 border-white/10 text-white/40 hover:text-white hover:border-white/20'
+                                : 'bg-white/5 border-white/10 text-cloud-dancer/60 hover:text-white hover:border-white/20'
                                 }`}
                         >
                             {cat.icon}
@@ -190,7 +190,7 @@ export default function Pricing() {
                                                 </div>
                                                 <h3 className="text-xl md:text-2xl font-bold text-white tracking-tight">{service.title}</h3>
                                             </div>
-                                            <p className="text-white/40 text-sm leading-relaxed mb-6">{service.included}</p>
+                                            <p className="text-cloud-dancer/60 text-sm leading-relaxed mb-6">{service.included}</p>
 
                                             <div className="flex flex-wrap gap-4 md:gap-8">
                                                 <div className="flex items-center gap-2">
@@ -232,7 +232,7 @@ export default function Pricing() {
                         </div>
                         <div>
                             <h4 className="text-2xl md:text-3xl font-bold text-white mb-2 uppercase tracking-tight">Нужен индивидуальный расчёт?</h4>
-                            <p className="text-white/40 text-lg">Мы подготовим детализированную смету и ТЗ в течение 24 часов.</p>
+                            <p className="text-cloud-dancer/60 text-lg">Мы подготовим детализированную смету и ТЗ в течение 24 часов.</p>
                         </div>
                     </div>
                     <a href="#contact" className="btn-amber-glow px-12 py-6 whitespace-nowrap relative z-10 shadow-amber-glow text-[10px] tracking-[0.3em]">

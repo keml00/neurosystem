@@ -42,7 +42,7 @@ const conditions = [
 
 export default function TrustConditions() {
     return (
-        <section className="section-padding bg-[#0d0d0d] relative overflow-hidden">
+        <section className="section-padding bg-future-dusk relative overflow-hidden">
             <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
             <div className="container mx-auto px-6">
@@ -50,7 +50,7 @@ export default function TrustConditions() {
                     <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 uppercase tracking-tight">
                         ЧЕСТНЫЕ <span className="text-transformative-teal italic">УСЛОВИЯ</span>
                     </h2>
-                    <p className="text-xl text-white/40 leading-relaxed uppercase tracking-widest text-sm">
+                    <p className="text-xl text-cloud-dancer/60 leading-relaxed uppercase tracking-widest text-sm">
                         Работаем так, чтобы вы не беспокоились о результате.
                     </p>
                 </div>
@@ -75,7 +75,7 @@ export default function TrustConditions() {
                                         {condition.items.map((item, i) => (
                                             <li key={i} className="flex items-start gap-4">
                                                 <AlertCircle className="w-4 h-4 mt-1 text-white/20 shrink-0" />
-                                                <span className="text-white/50 text-base leading-relaxed">{item}</span>
+                                                <span className="text-cloud-dancer/50 text-base leading-relaxed">{item}</span>
                                             </li>
                                         ))}
                                     </ul>

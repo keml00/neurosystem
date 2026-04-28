@@ -34,13 +34,13 @@ const scalingSteps = [
 
 export default function ProjectScaling() {
     return (
-        <section className="section-padding bg-[#0d0d0d] relative overflow-hidden">
+        <section className="section-padding bg-future-dusk relative overflow-hidden">
             <div className="container mx-auto px-6">
                 <div className="max-w-4xl mx-auto text-center mb-20">
                     <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 uppercase tracking-tight">
                         МАСШТАБИРОВАНИЕ <span className="text-amber-haze italic">БЕЗ ГРАНИЦ</span>
                     </h2>
-                    <p className="text-xl text-white/40 leading-relaxed">
+                    <p className="text-xl text-cloud-dancer/60 leading-relaxed">
                         Мы строим проекты по модульному принципу. Логика, созданная на старте, переиспользуется на каждом этапе роста. Вам не нужно переплачивать за разработку с нуля.
                     </p>
                 </div>
@@ -63,7 +63,7 @@ export default function ProjectScaling() {
                             </div>
                             <h3 className="text-lg font-black text-white mb-2 tracking-tight group-hover:text-amber-haze transition-colors">{step.title}</h3>
                             <div className="text-transformative-teal font-bold text-sm mb-4 tracking-widest">{step.price}</div>
-                            <p className="text-sm text-white/40 leading-relaxed mb-6">{step.description}</p>
+                            <p className="text-sm text-cloud-dancer/60 leading-relaxed mb-6">{step.description}</p>
 
                             {index < scalingSteps.length - 1 && (
                                 <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-white/20">
@@ -81,17 +81,17 @@ export default function ProjectScaling() {
                         <div className="space-y-3">
                             <div className="text-amber-haze font-black text-2xl">01</div>
                             <h4 className="text-white font-bold uppercase text-sm tracking-wider">Низкий порог входа</h4>
-                            <p className="text-white/40 text-sm">Начинаем с MVP за 120 000 ₽. Проверяем гипотезу, получаем первых клиентов и только потом расширяемся.</p>
+                            <p className="text-cloud-dancer/60 text-sm">Начинаем с MVP за 120 000 ₽. Проверяем гипотезу, получаем первых клиентов и только потом расширяемся.</p>
                         </div>
                         <div className="space-y-3">
                             <div className="text-amber-haze font-black text-2xl">02</div>
                             <h4 className="text-white font-bold uppercase text-sm tracking-wider">Экономия до 60%</h4>
-                            <p className="text-white/40 text-sm">Backend и бизнес-логика пишутся один раз. Вы платите только за адаптацию интерфейса под новые платформы.</p>
+                            <p className="text-cloud-dancer/60 text-sm">Backend и бизнес-логика пишутся один раз. Вы платите только за адаптацию интерфейса под новые платформы.</p>
                         </div>
                         <div className="space-y-3">
                             <div className="text-amber-haze font-black text-2xl">03</div>
                             <h4 className="text-white font-bold uppercase text-sm tracking-wider">Скорость запуска</h4>
-                            <p className="text-white/40 text-sm">Первая работающая версия (бот) готова уже через 2 недели. Ваш бизнес начинает работать, пока идет разработка веба.</p>
+                            <p className="text-cloud-dancer/60 text-sm">Первая работающая версия (бот) готова уже через 2 недели. Ваш бизнес начинает работать, пока идет разработка веба.</p>
                         </div>
                     </div>
                 </div>

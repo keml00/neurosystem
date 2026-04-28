@@ -61,7 +61,7 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
                         <div className="p-8 border-b border-white/5 flex items-center justify-between shrink-0">
                             <h2 className="text-2xl font-black text-white uppercase tracking-tight">Бесплатная консультация</h2>
                             <button onClick={onClose} className="p-2 hover:bg-white/5 rounded-full transition-colors">
-                                <X className="w-6 h-6 text-white/40" />
+                                <X className="w-6 h-6 text-cloud-dancer/60" />
                             </button>
                         </div>
 
@@ -70,7 +70,7 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
                             <form onSubmit={handleSubmit} className="space-y-6">
                                 {/* Name */}
                                 <div>
-                                    <label className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-white/40 mb-3 ml-1">
+                                    <label className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-cloud-dancer/60 mb-3 ml-1">
                                         <User className="w-3 h-3" /> Имя <span className="text-red-500">*</span>
                                     </label>
                                     <input
@@ -85,7 +85,7 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
 
                                 {/* Phone */}
                                 <div>
-                                    <label className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-white/40 mb-3 ml-1">
+                                    <label className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-cloud-dancer/60 mb-3 ml-1">
                                         <Phone className="w-3 h-3" /> Номер телефона <span className="text-red-500">*</span>
                                     </label>
                                     <input
@@ -100,7 +100,7 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
 
                                 {/* Telegram */}
                                 <div>
-                                    <label className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-white/40 mb-3 ml-1">
+                                    <label className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-cloud-dancer/60 mb-3 ml-1">
                                         <MessageSquare className="w-3 h-3" /> Телеграм (по желанию)
                                     </label>
                                     <input
@@ -114,7 +114,7 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
 
                                 {/* Topic */}
                                 <div>
-                                    <label className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-white/40 mb-3 ml-1">
+                                    <label className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-cloud-dancer/60 mb-3 ml-1">
                                         <Tag className="w-3 h-3" /> Тема заявки <span className="text-red-500">*</span>
                                     </label>
                                     <input
@@ -129,7 +129,7 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
 
                                 {/* Comment */}
                                 <div>
-                                    <label className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-white/40 mb-3 ml-1">
+                                    <label className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-cloud-dancer/60 mb-3 ml-1">
                                         <FileText className="w-3 h-3" /> Комментарий
                                     </label>
                                     <textarea
@@ -143,7 +143,7 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
 
                                 {/* Budget */}
                                 <div>
-                                    <label className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-white/40 mb-3 ml-1">
+                                    <label className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-cloud-dancer/60 mb-3 ml-1">
                                         <Wallet className="w-3 h-3" /> Бюджет (по желанию)
                                     </label>
                                     <input
@@ -177,7 +177,7 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
                                     <button
                                         type="button"
                                         onClick={onClose}
-                                        className="w-full sm:w-auto px-8 py-5 text-white/40 font-bold text-xs uppercase hover:text-white transition-colors"
+                                        className="w-full sm:w-auto px-8 py-5 text-cloud-dancer/60 font-bold text-xs uppercase hover:text-white transition-colors"
                                     >
                                         Отмена
                                     </button>
