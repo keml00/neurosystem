@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { MessageSquare, Cpu, Box, CheckCircle2, Globe } from 'lucide-react';
+import { MessageSquare, Cpu, Box, CheckCircle2, Globe, Phone, TrendingUp } from 'lucide-react';
 
 const services = [
     {
@@ -9,6 +9,22 @@ const services = [
         result: 'Бот квалифицирует лид, принимает оплату и записывает клиента в CRM за 3 секунды в режиме 24/7.',
         icon: <MessageSquare className="w-8 h-8" />,
         features: ['Интеграция с Telegram/WhatsApp', 'Подключение платежных систем', 'Авто-запись в CRM']
+    },
+    {
+        id: 'voice-ai',
+        title: 'AI Voice Agents',
+        pain: 'Колл-центр не справляется с потоком звонков, высокая текучка операторов, дорогое содержание штата.',
+        result: 'AI-ассистент принимает входящие звонки, квалифицирует лиды, записывает на услуги. Звучит как живой человек.',
+        icon: <Phone className="w-8 h-8" />,
+        features: ['Прием звонков 24/7', 'Исходящие звонки', 'Интеграция с телефонией', 'Распознавание эмоций']
+    },
+    {
+        id: 'ai-marketing',
+        title: 'AI-маркетинг',
+        pain: 'Нет времени/денег на SMM-менеджера, контент выходит нерегулярно, охваты падают.',
+        result: 'AI генерирует посты для соцсетей, создает изображения, пишет тексты для рассылок, анализирует конкурентов.',
+        icon: <TrendingUp className="w-8 h-8" />,
+        features: ['Генерация постов и изображений', 'Автопостинг по расписанию', 'Анализ конкурентов', 'A/B тестирование']
     },
     {
         id: 'infrastructure',
