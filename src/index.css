@@ -52,9 +52,13 @@
 
 @layer components {
   .btn-amber-glow {
-    @apply relative overflow-hidden bg-gradient-to-r from-amber-haze/90 to-[#ffc470]/90 text-white px-8 py-4 rounded-xl font-bold transition-all duration-300 hover:scale-105 active:scale-95 shadow-amber-glow hover:shadow-amber-glow-hover;
+    @apply relative overflow-hidden bg-gradient-to-r from-[#D4AF37] via-amber-haze to-[#FFA500] text-white px-8 py-4 rounded-xl font-bold transition-all duration-300 hover:scale-105 active:scale-95 shadow-amber-glow hover:shadow-amber-glow-hover;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
+  }
+
+  .hero-image {
+    animation: float 6s ease-in-out infinite;
   }
 
   .glass-dark {

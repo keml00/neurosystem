@@ -92,8 +92,8 @@ export default function Hero({ onOpenConsultation }: HeroProps) {
                                 alt="AI Neurosystems"
                                 className="w-full h-auto drop-shadow-[0_0_50px_rgba(48,213,200,0.3)]"
                                 style={{
-                                    maskImage: 'radial-gradient(circle, black 40%, transparent 80%)',
-                                    WebkitMaskImage: 'radial-gradient(circle, black 40%, transparent 80%)'
+                                    maskImage: 'radial-gradient(ellipse at center, black 30%, rgba(0,0,0,0.8) 50%, transparent 75%)',
+                                    WebkitMaskImage: 'radial-gradient(ellipse at center, black 30%, rgba(0,0,0,0.8) 50%, transparent 75%)'
                                 }}
                             />
                         </div>
