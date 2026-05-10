@@ -1,9 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+    <!-- Главная страница -->
     <url>
         <loc>https://neurosystem-one.vercel.app/</loc>
-        <lastmod>2026-04-19</lastmod>
+        <lastmod>2026-05-10</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://neurosystem-one.vercel.app/hero-new.png</image:loc>
+            <image:title>NEUROSYSTEMS - AI-автоматизация бизнеса</image:title>
+            <image:caption>Разработка AI-ботов, Voice AI, Telegram ботов и автоматизация бизнес-процессов</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://neurosystem-one.vercel.app/favicon.png</image:loc>
+            <image:title>NEUROSYSTEMS логотип</image:title>
+        </image:image>
     </url>
+
+    <!-- Услуги -->
+    <url>
+        <loc>https://neurosystem-one.vercel.app/#services</loc>
+        <lastmod>2026-05-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Цены / Тарифы -->
+    <url>
+        <loc>https://neurosystem-one.vercel.app/#pricing</loc>
+        <lastmod>2026-05-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Масштабирование проектов -->
+    <url>
+        <loc>https://neurosystem-one.vercel.app/#project-scaling</loc>
+        <lastmod>2026-05-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Стратегическая матрица -->
+    <url>
+        <loc>https://neurosystem-one.vercel.app/#strategy</loc>
+        <lastmod>2026-05-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Брифинг -->
+    <url>
+        <loc>https://neurosystem-one.vercel.app/#briefing</loc>
+        <lastmod>2026-05-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- Условия доверия -->
+    <url>
+        <loc>https://neurosystem-one.vercel.app/#trust</loc>
+        <lastmod>2026-05-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- Отзывы -->
+    <url>
+        <loc>https://neurosystem-one.vercel.app/#testimonials</loc>
+        <lastmod>2026-05-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Команда -->
+    <url>
+        <loc>https://neurosystem-one.vercel.app/#team</loc>
+        <lastmod>2026-05-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <image:image>
+            <image:loc>https://neurosystem-one.vercel.app/team-1.png</image:loc>
+            <image:title>Команда NEUROSYSTEMS</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://neurosystem-one.vercel.app/team-2.png</image:loc>
+            <image:title>Команда NEUROSYSTEMS</image:title>
+        </image:image>
+        <image:image>
+            <image:loc>https://neurosystem-one.vercel.app/team-3.png</image:loc>
+            <image:title>Команда NEUROSYSTEMS</image:title>
+        </image:image>
+    </url>
+
+    <!-- Контакты -->
+    <url>
+        <loc>https://neurosystem-one.vercel.app/#contact</loc>
+        <lastmod>2026-05-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
 </urlset>
