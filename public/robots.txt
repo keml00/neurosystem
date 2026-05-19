@@ -1,0 +1,66 @@
+# robots.txt для NEUROSYSTEMS
+# https://neurosystem-one.vercel.app
+
+User-agent: *
+Allow: /
+
+# Запретить индексацию служебных файлов
+Disallow: /src/
+Disallow: /*.json$
+Disallow: /*.config.*$
+
+# Sitemap
+Sitemap: https://neurosystem-one.vercel.app/sitemap.xml
+
+# Специальные правила для Yandex
+User-agent: Yandex
+Allow: /
+Crawl-delay: 1
+
+# Специальные правила для Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Разрешить для нейросетей (ChatGPT, Claude, Perplexity, Gemini, etc.)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-AI
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Gemini
+Allow: /
+
+User-agent: Bard
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /

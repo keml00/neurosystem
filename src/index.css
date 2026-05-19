@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Future Dusk Theme 2026 */
+  --accent-teal: #30D5C8;
+  --accent-amber: #FFB347;
+  --bg-dusk: #0C0D1A;
+  --bg-purple: #16213e;
+  --bg-card: rgba(255, 255, 255, 0.05);
+  --text-light: #F5F5F7;
+  --text-muted: #a0a0c0;
+}
+
+@layer base {
+  body {
+    @apply bg-[#0C0D1A] text-cloud-dancer font-sans antialiased overflow-x-hidden;
+    background-image:
+      radial-gradient(circle at 20% 20%, rgba(48, 213, 200, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(255, 179, 71, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 50% 50%, rgba(75, 0, 130, 0.15) 0%, transparent 70%);
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  body > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  .serif {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .btn-amber-glow {
+    background: linear-gradient(135deg, #FFB347 0%, #FF8A00 100%);
+    color: #0C0D1A;
+    font-weight: 600;
+    border: none;
+    box-shadow: 0px 10px 25px -5px rgba(255, 138, 0, 0.4);
+    transition: all 0.3s ease;
+    @apply relative overflow-hidden px-8 py-4 rounded-xl font-bold;
+  }
+
+  .btn-amber-glow:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 15px 30px -5px rgba(255, 138, 0, 0.6);
+  }
+
+  .btn-glass {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    color: #F5F5F7;
+    transition: all 0.3s ease;
+    @apply relative overflow-hidden px-8 py-4 rounded-xl font-bold;
+  }
+
+  .btn-glass:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .hero-image {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .glass-dark {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10;
+  }
+
+  .glass-nav {
+    @apply fixed top-0 left-0 right-0 z-50 bg-future-dusk/80 backdrop-blur-md border-b border-white/5;
+  }
+
+  .section-padding {
+    @apply py-24 px-6 md:px-12 lg:px-24;
+  }
+
+  .teal-text-glow {
+    @apply text-transformative-teal drop-shadow-[0_0_8px_#30D5C880];
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-future-dusk;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-[#4a4d6e] rounded-full hover:bg-[#5a5d7e] transition-colors;
+}
