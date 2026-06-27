@@ -36,11 +36,14 @@ function App() {
     const savedUniqueCount = localStorage.getItem('uniqueVisitors');
     const savedTotalCount = localStorage.getItem('totalVisitors');
     const hasVisited = localStorage.getItem('hasVisited');
+    const MIN_UNIQUE = 2500;
+    const MIN_TOTAL = 5500;
 
     if (!hasVisited) {
-      // First visit - increment both counters
-      const newUnique = savedUniqueCount ? parseInt(savedUniqueCount) + 1 : 2500;
-      const newTotal = savedTotalCount ? parseInt(savedTotalCount) + 1 : 5500;
+      let uniqueBase = savedUniqueCount ? Math.max(parseInt(savedUniqueCount), MIN_UNIQUE) : MIN_UNIQUE;
+      let totalBase = savedTotalCount ? Math.max(parseInt(savedTotalCount), MIN_TOTAL) : MIN_TOTAL;
+      const newUnique = uniqueBase + 1;
+      const newTotal = totalBase + 1;
 
       setUniqueVisitors(newUnique);
       setTotalVisitors(newTotal);
@@ -49,18 +52,17 @@ function App() {
       localStorage.setItem('totalVisitors', newTotal.toString());
       localStorage.setItem('hasVisited', 'true');
 
-      // Отправляем уведомление о новом посетителе
       sendVisitorNotification(true);
     } else {
-      // Return visit - only increment total
-      const newTotal = savedTotalCount ? parseInt(savedTotalCount) + 1 : 5500;
+      let totalBase = savedTotalCount ? Math.max(parseInt(savedTotalCount), MIN_TOTAL) : MIN_TOTAL;
+      const newTotal = totalBase + 1;
+      let uniqueBase = savedUniqueCount ? Math.max(parseInt(savedUniqueCount), MIN_UNIQUE) : MIN_UNIQUE;
 
-      setUniqueVisitors(savedUniqueCount ? parseInt(savedUniqueCount) : 2500);
+      setUniqueVisitors(uniqueBase);
       setTotalVisitors(newTotal);
 
       localStorage.setItem('totalVisitors', newTotal.toString());
 
-      // Отправляем уведомление о повторном посещении
       sendVisitorNotification(false);
     }
   }, []);
