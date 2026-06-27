@@ -1,38 +1,48 @@
 import { motion } from 'framer-motion';
-import { Cpu, Network, Database } from 'lucide-react';
+import { Cpu, Network, Database, ArrowUpRight } from 'lucide-react';
 
 const team = [
     {
         name: "КАМИЛЬ",
         role: "HEAD OF ENGINEERING",
         bio: "Архитектор распределенных систем и AI-решений с 12-летним опытом. Курирует разработку ядра автоматизации.",
-        icon: <Cpu className="w-16 h-16" />,
-        color: "from-transformative-teal"
+        icon: <Cpu className="w-14 h-14" />,
+        gradient: "from-[#30D5C8] to-[#FFB347]",
+        borderGlow: "group-hover:border-[#30D5C8]/40"
     },
     {
         name: "ДМИТРИЙ",
         role: "AI ARCHITECT",
         bio: "Специалист по нейронным сетям и интеграции LLM в бизнес-процессы. Отвечает за интеллектуальную логику систем.",
-        icon: <Network className="w-16 h-16" />,
-        color: "from-amber-haze"
+        icon: <Network className="w-14 h-14" />,
+        gradient: "from-[#FFB347] to-[#FF6B35]",
+        borderGlow: "group-hover:border-[#FFB347]/40"
     },
     {
         name: "МАКСИМ",
         role: "SYSTEMS ENGINEER",
         bio: "Эксперт по высоконагруженным базам данных и API-интеграциям. Обеспечивает отказоустойчивость 99.9%.",
-        icon: <Database className="w-16 h-16" />,
-        color: "from-blue-500"
+        icon: <Database className="w-14 h-14" />,
+        gradient: "from-[#30D5C8] to-[#FF6B35]",
+        borderGlow: "group-hover:border-[#30D5C8]/40"
     }
 ];
 
 export default function Team() {
     return (
-        <section id="team" className="section-padding bg-future-dusk">
-            <div className="container mx-auto">
-                <div className="text-center max-w-2xl mx-auto mb-16 md:mb-20">
-                    <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 md:mb-8">КОМАНДА <span className="text-transformative-teal italic">ИНЖЕНЕРОВ</span></h2>
-                    <p className="text-base md:text-xl text-cloud-dancer/60 leading-relaxed uppercase tracking-widest text-xs md:text-sm">ОПЫТ. ИНТЕЛЛЕКТ. ТЕХНОЛОГИИ.</p>
-                </div>
+        <section id="team" className="section-padding relative overflow-hidden">
+            <div className="glow-orb bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-[#30D5C8]" />
+
+            <div className="container mx-auto relative z-10">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="text-center max-w-2xl mx-auto mb-16 md:mb-20"
+                >
+                    <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 md:mb-8">КОМАНДА <span className="gradient-text italic">ИНЖЕНЕРОВ</span></h2>
+                    <p className="text-xs md:text-sm text-white/40 uppercase tracking-[0.3em] font-bold">ОПЫТ. ИНТЕЛЛЕКТ. ТЕХНОЛОГИИ.</p>
+                </motion.div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
                     {team.map((member, index) => (
@@ -41,18 +51,21 @@ export default function Team() {
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ delay: index * 0.2 }}
-                            className="text-center group p-8 bg-white/5 rounded-[2.5rem] border border-white/10 hover:border-white/20 transition-all duration-500"
+                            transition={{ delay: index * 0.15 }}
+                            className={`text-center group p-8 glass-card ${member.borderGlow}`}
                         >
-                            <div className="relative inline-flex items-center justify-center w-32 h-32 mb-10 mx-auto">
-                                <div className={`absolute inset-0 bg-gradient-to-tr ${member.color} to-transparent rounded-3xl blur-2xl opacity-20 group-hover:opacity-40 transition-opacity duration-500`} />
-                                <div className="relative z-10 text-white/80 group-hover:text-white transition-colors duration-500 scale-125">
+                            <div className="relative inline-flex items-center justify-center w-28 h-28 mb-10 mx-auto">
+                                <div className={`absolute inset-0 bg-gradient-to-br ${member.gradient} rounded-3xl blur-2xl opacity-15 group-hover:opacity-30 transition-opacity duration-500`} />
+                                <div className="relative z-10 text-white/70 group-hover:text-white transition-colors duration-500">
                                     {member.icon}
                                 </div>
                             </div>
                             <h3 className="text-2xl font-bold text-white mb-2 tracking-tight uppercase">{member.name}</h3>
-                            <p className="text-transformative-teal font-bold text-xs tracking-widest mb-6 uppercase">{member.role}</p>
-                            <p className="text-cloud-dancer/60 text-sm leading-relaxed max-w-xs mx-auto">{member.bio}</p>
+                            <p className="text-[#30D5C8] font-bold text-xs tracking-widest mb-6 uppercase">{member.role}</p>
+                            <p className="text-white/50 text-sm leading-relaxed max-w-xs mx-auto">{member.bio}</p>
+                            <div className="mt-8 pt-6 border-t border-white/[0.05] flex justify-center">
+                                <ArrowUpRight className="w-4 h-4 text-white/20 group-hover:text-[#30D5C8] transition-colors" />
+                            </div>
                         </motion.div>
                     ))}
                 </div>

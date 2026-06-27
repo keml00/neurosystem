@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Quote } from 'lucide-react';
+import { Quote, Star } from 'lucide-react';
 
 const testimonials = [
     {
@@ -24,11 +24,19 @@ const testimonials = [
 
 export default function Testimonials() {
     return (
-        <section id="testimonials" className="section-padding bg-[#0a0a0a]">
-            <div className="container mx-auto">
-                <div className="max-w-3xl mb-16 md:mb-20 text-center md:text-left">
-                    <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 md:mb-8">ЧТО ГОВОРЯТ <span className="text-transformative-teal italic">ПАРТНЕРЫ</span></h2>
-                </div>
+        <section id="testimonials" className="section-padding relative overflow-hidden">
+            <div className="glow-orb top-0 right-0 w-[500px] h-[500px] bg-[#FFB347]" />
+            <div className="glow-orb bottom-0 left-0 w-[400px] h-[400px] bg-[#30D5C8]" />
+
+            <div className="container mx-auto relative z-10">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="max-w-3xl mb-16 md:mb-20 text-center md:text-left"
+                >
+                    <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 md:mb-8">ЧТО ГОВОРЯТ <span className="gradient-text italic">ПАРТНЕРЫ</span></h2>
+                </motion.div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                     {testimonials.map((testimonial, index) => (
@@ -38,17 +46,22 @@ export default function Testimonials() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="bg-white/5 p-10 rounded-[2.5rem] border border-white/5 relative group hover:border-[#00d9b8]/20 transition-all duration-500"
+                            className="glass-card p-10 relative group hover:border-[#30D5C8]/30 transition-all duration-500"
                         >
-                            <Quote className="absolute top-8 right-10 w-16 h-16 text-[#00d9b8]/5 z-0" />
+                            <Quote className="absolute top-8 right-10 w-14 h-14 text-[#30D5C8]/5 z-0" />
                             <div className="relative z-10">
-                                <p className="text-xl text-white/70 italic mb-12 leading-relaxed font-serif">
-                                    "{testimonial.content}"
+                                <div className="flex gap-1 mb-8">
+                                    {[...Array(5)].map((_, i) => (
+                                        <Star key={i} className="w-4 h-4 fill-[#FFB347] text-[#FFB347]" />
+                                    ))}
+                                </div>
+                                <p className="text-lg text-white/60 italic mb-12 leading-relaxed font-serif">
+                                    {testimonial.content}
                                 </p>
-                                <div className="flex items-center gap-4 border-t border-white/5 pt-6">
+                                <div className="flex items-center gap-4 border-t border-white/[0.05] pt-6">
                                     <div className="flex-1">
                                         <p className="font-bold text-white text-sm uppercase tracking-wider">{testimonial.name}</p>
-                                        <p className="text-transformative-teal text-[10px] font-bold tracking-[0.2em]">{testimonial.role}</p>
+                                        <p className="text-[#30D5C8] text-[10px] font-bold tracking-[0.2em]">{testimonial.role}</p>
                                     </div>
                                     <div className="text-white/20 text-[10px] font-bold tracking-widest">{testimonial.date}</div>
                                 </div>

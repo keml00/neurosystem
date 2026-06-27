@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, MessageSquare } from 'lucide-react';
+import { ArrowRight, MessageSquare, Sparkles } from 'lucide-react';
 
 interface HeroProps {
     onOpenConsultation: () => void;
@@ -21,33 +21,40 @@ export default function Hero({ onOpenConsultation }: HeroProps) {
 
     return (
         <section className="relative min-h-screen flex items-center pt-28 overflow-hidden">
-            {/* Background Effects */}
-            <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-transformative-teal/5 rounded-full blur-[150px] -z-10" />
+            <div className="glow-orb top-1/4 -left-32 w-[600px] h-[600px] bg-[#30D5C8]" />
+            <div className="glow-orb bottom-1/4 -right-32 w-[500px] h-[500px] bg-[#FF6B35]" />
 
             <div className="container mx-auto px-6 md:px-12 lg:px-24 relative z-10 py-12 lg:py-0">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                     <motion.div
-                        initial={{ opacity: 0, x: -50 }}
-                        animate={{ opacity: 1, x: 0 }}
+                        initial={{ opacity: 0, y: 40 }}
+                        animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, ease: "easeOut" }}
                         className="lg:col-span-7 text-center lg:text-left"
                     >
-                        <div className="flex items-center justify-center lg:justify-start gap-3 mb-8">
-                            <div className="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center border border-white/10">
-                                <span className="text-transformative-teal font-bold">AI</span>
-                            </div>
-                            <span className="text-sm font-bold uppercase tracking-[0.3em] text-cloud-dancer/50">NEUROSYSTEMS</span>
-                        </div>
+                        <motion.div
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: 0.2 }}
+                            className="flex items-center justify-center lg:justify-start gap-2 mb-8"
+                        >
+                            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.04] border border-white/[0.08] text-[10px] font-bold uppercase tracking-[0.3em] text-white/40">
+                                <Sparkles className="w-3 h-3 text-[#30D5C8]" />
+                                AI-АВТОМАТИЗАЦИЯ 2026
+                            </span>
+                        </motion.div>
 
-                        <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-white leading-[1.1] mb-8 tracking-tighter">
-                            АВТОМАТИЗАЦИЯ <br />
-                            <span className="text-transformative-teal italic">БИЗНЕСА</span> <br />
+                        <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-white leading-[1.05] mb-8 tracking-tighter">
+                            АВТОМАТИЗАЦИЯ{' '}
+                            <br />
+                            <span className="gradient-text italic">БИЗНЕСА</span>
+                            <br />
                             ЧЕРЕЗ ИИ
                         </h1>
 
-                        <p className="text-base md:text-xl text-cloud-dancer/60 mb-10 leading-relaxed max-w-xl mx-auto lg:mx-0" style={{ lineHeight: '1.8' }}>
+                        <p className="text-base md:text-lg text-white/50 mb-10 leading-relaxed max-w-xl mx-auto lg:mx-0">
                             Проектируем и внедряем интеллектуальные системы, которые заменяют рутину на прибыль. Ваш персональный инженерный отдел на аутсорсе.
-                            <span className="text-cloud-dancer"> Бесплатно составим ТЗ и рассчитаем ROI вашего проекта за 24 часа.</span>
+                            <span className="text-white/70"> Бесплатно составим ТЗ и рассчитаем ROI вашего проекта за 24 часа.</span>
                         </p>
 
                         <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6 mb-16">
@@ -67,38 +74,38 @@ export default function Hero({ onOpenConsultation }: HeroProps) {
                             </button>
                         </div>
 
-                        <div className="mt-12 flex flex-wrap gap-8 text-sm font-bold text-cloud-dancer/60">
+                        <div className="mt-12 flex flex-wrap gap-8 text-sm font-bold text-white/50">
                             <div className="flex items-center gap-2">
-                                <span className="text-transformative-teal">✔</span> 150+ ЗАПУЩЕННЫХ СИСТЕМ
+                                <span className="text-[#30D5C8]">✦</span> 150+ ЗАПУЩЕННЫХ СИСТЕМ
                             </div>
                             <div className="flex items-center gap-2">
-                                <span className="text-transformative-teal">✔</span> 30% ЭКОНОМИИ БЮДЖЕТА
+                                <span className="text-[#30D5C8]">✦</span> 30% ЭКОНОМИИ БЮДЖЕТА
                             </div>
                             <div className="flex items-center gap-2">
-                                <span className="text-transformative-teal">✔</span> 0 ₽ ГАРАНТИЯ НА БАГИ
+                                <span className="text-[#30D5C8]">✦</span> 0 ₽ ГАРАНТИЯ НА БАГИ
                             </div>
                         </div>
                     </motion.div>
 
                     <motion.div
-                        initial={{ opacity: 0, scale: 0.8 }}
+                        initial={{ opacity: 0, scale: 0.85 }}
                         animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 1, delay: 0.2 }}
+                        transition={{ duration: 1, delay: 0.3 }}
                         className="relative lg:col-span-5 flex justify-center lg:justify-end order-first lg:order-last"
                     >
                         <div className="relative z-10 p-4 max-w-[500px] lg:max-w-full animate-float">
                             <img
                                 src="/hero-new.png"
                                 alt="AI Neurosystems"
-                                className="w-full h-auto drop-shadow-[0_0_50px_rgba(48,213,200,0.3)]"
+                                className="w-full h-auto"
                                 style={{
                                     maskImage: 'radial-gradient(ellipse at center, black 30%, rgba(0,0,0,0.8) 50%, transparent 75%)',
                                     WebkitMaskImage: 'radial-gradient(ellipse at center, black 30%, rgba(0,0,0,0.8) 50%, transparent 75%)'
                                 }}
                             />
                         </div>
-                        {/* Pulsing glow behind the image */}
-                        <div className="absolute inset-0 bg-gradient-to-tr from-transformative-teal/10 to-transparent rounded-full blur-[100px] animate-pulse -z-10" />
+                        <div className="absolute inset-0 bg-gradient-to-tr from-[#30D5C8]/10 to-transparent rounded-full blur-[120px] animate-pulse-slow -z-10" />
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-[#FFB347]/5 rounded-full blur-[100px] animate-pulse-slow" />
                     </motion.div>
                 </div>
             </div>

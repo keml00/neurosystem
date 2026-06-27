@@ -8,7 +8,9 @@ export default {
     extend: {
       colors: {
         'future-dusk': '#0C0D1A',
+        'ral-grey': '#0C0D1A',
         'transformative-teal': '#30D5C8',
+        'neon-cyan': '#30D5C8',
         'amber-haze': '#FFB347',
         'cloud-dancer': '#F5F5F7',
       },
@@ -20,12 +22,18 @@ export default {
       },
       animation: {
         'float': 'float 6s ease-in-out infinite',
+        'pulse-slow': 'pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'shimmer': 'shimmer 8s ease-in-out infinite alternate',
       },
       keyframes: {
         float: {
           '0%, 100%': { transform: 'translateY(0px)' },
           '50%': { transform: 'translateY(-20px)' },
-        }
+        },
+        shimmer: {
+          '0%': { backgroundPosition: '0% 50%' },
+          '100%': { backgroundPosition: '100% 50%' },
+        },
       }
     },
   },

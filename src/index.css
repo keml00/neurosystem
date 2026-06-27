@@ -1,27 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
-  /* Future Dusk Theme 2026 */
   --accent-teal: #30D5C8;
   --accent-amber: #FFB347;
   --bg-dusk: #0C0D1A;
-  --bg-purple: #16213e;
-  --bg-card: rgba(255, 255, 255, 0.05);
+  --bg-card: rgba(255, 255, 255, 0.04);
   --text-light: #F5F5F7;
-  --text-muted: #a0a0c0;
+  --text-muted: rgba(255, 255, 255, 0.4);
 }
 
 @layer base {
   body {
     @apply bg-[#0C0D1A] text-cloud-dancer font-sans antialiased overflow-x-hidden;
     background-image:
-      radial-gradient(circle at 20% 20%, rgba(48, 213, 200, 0.08) 0%, transparent 50%),
-      radial-gradient(circle at 80% 80%, rgba(255, 179, 71, 0.08) 0%, transparent 50%),
-      radial-gradient(circle at 50% 50%, rgba(75, 0, 130, 0.15) 0%, transparent 70%);
+      radial-gradient(ellipse at 15% 15%, rgba(48, 213, 200, 0.06) 0%, transparent 55%),
+      radial-gradient(ellipse at 85% 85%, rgba(255, 179, 71, 0.06) 0%, transparent 55%),
+      radial-gradient(ellipse at 50% 50%, rgba(75, 0, 130, 0.08) 0%, transparent 70%);
   }
 
   body::before {
@@ -31,26 +33,44 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 60px 60px;
     pointer-events: none;
-    z-index: 1;
+    z-index: 0;
   }
 
   body > * {
     position: relative;
-    z-index: 2;
+    z-index: 1;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  .serif {
+  h1, h2, h3, h4, .serif {
     @apply font-serif;
   }
 }
 
 @layer components {
+  .btn-neon-orange {
+    background: linear-gradient(135deg, #FF8A00 0%, #FF6B35 100%);
+    color: #fff;
+    font-weight: 700;
+    border: none;
+    box-shadow: 0 4px 20px rgba(255, 107, 53, 0.35);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    @apply px-8 py-4 rounded-xl font-bold text-xs tracking-[0.2em] uppercase;
+  }
+
+  .btn-neon-orange:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(255, 107, 53, 0.5);
+  }
+
   .btn-amber-glow {
     background: linear-gradient(135deg, #FFB347 0%, #FF8A00 100%);
     color: #0C0D1A;
@@ -81,35 +101,46 @@
     border: 1px solid rgba(255, 255, 255, 0.3);
   }
 
-  .hero-image {
-    animation: float 6s ease-in-out infinite;
+  .glass-card {
+    @apply bg-white/[0.04] backdrop-blur-xl border border-white/[0.07] rounded-[2.5rem];
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .glass-dark {
-    @apply bg-white/5 backdrop-blur-xl border border-white/10;
+  .glass-card:hover {
+    @apply border-white/20;
+    background: rgba(255, 255, 255, 0.06);
   }
 
   .glass-nav {
-    @apply fixed top-0 left-0 right-0 z-50 bg-future-dusk/80 backdrop-blur-md border-b border-white/5;
+    @apply fixed top-0 left-0 right-0 z-50 bg-[#0C0D1A]/80 backdrop-blur-md border-b border-white/5;
   }
 
   .section-padding {
     @apply py-24 px-6 md:px-12 lg:px-24;
   }
 
-  .teal-text-glow {
-    @apply text-transformative-teal drop-shadow-[0_0_8px_#30D5C880];
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#30D5C8] via-[#FFB347] to-[#FF6B35];
+  }
+
+  .glow-orb {
+    @apply absolute rounded-full blur-[120px] opacity-20 pointer-events-none;
   }
 }
 
+::selection {
+  background: rgba(48, 213, 200, 0.3);
+  color: #fff;
+}
+
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-future-dusk;
+  @apply bg-[#0C0D1A];
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-[#4a4d6e] rounded-full hover:bg-[#5a5d7e] transition-colors;
+  @apply bg-white/10 rounded-full hover:bg-white/20 transition-colors;
 }
