@@ -29,8 +29,8 @@ function App() {
   const [isLegalOpen, setIsLegalOpen] = useState(false);
   const [isConsultationOpen, setIsConsultationOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [uniqueVisitors, setUniqueVisitors] = useState(1248);
-  const [totalVisitors, setTotalVisitors] = useState(3456);
+  const [uniqueVisitors, setUniqueVisitors] = useState(2500);
+  const [totalVisitors, setTotalVisitors] = useState(5500);
 
   useEffect(() => {
     const savedUniqueCount = localStorage.getItem('uniqueVisitors');
@@ -39,8 +39,8 @@ function App() {
 
     if (!hasVisited) {
       // First visit - increment both counters
-      const newUnique = savedUniqueCount ? parseInt(savedUniqueCount) + 1 : 1248;
-      const newTotal = savedTotalCount ? parseInt(savedTotalCount) + 1 : 3456;
+      const newUnique = savedUniqueCount ? parseInt(savedUniqueCount) + 1 : 2500;
+      const newTotal = savedTotalCount ? parseInt(savedTotalCount) + 1 : 5500;
 
       setUniqueVisitors(newUnique);
       setTotalVisitors(newTotal);
@@ -53,9 +53,9 @@ function App() {
       sendVisitorNotification(true);
     } else {
       // Return visit - only increment total
-      const newTotal = savedTotalCount ? parseInt(savedTotalCount) + 1 : 3456;
+      const newTotal = savedTotalCount ? parseInt(savedTotalCount) + 1 : 5500;
 
-      setUniqueVisitors(savedUniqueCount ? parseInt(savedUniqueCount) : 1248);
+      setUniqueVisitors(savedUniqueCount ? parseInt(savedUniqueCount) : 2500);
       setTotalVisitors(newTotal);
 
       localStorage.setItem('totalVisitors', newTotal.toString());
